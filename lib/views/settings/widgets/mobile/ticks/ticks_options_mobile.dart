@@ -1,6 +1,7 @@
-import 'package:almas/config/constants/settings_constants.dart';
 import 'package:almas/config/languages/extension/tr.dart';
+import 'package:almas/config/mine_images.dart';
 import 'package:almas/controllers/public/system_controller.dart';
+import 'package:almas/models/public/tick_option_model.dart';
 import 'package:almas/providers/private/settings_presenter.dart';
 import 'package:almas/views/settings/widgets/mobile/header_options_flag_mobile.dart';
 import 'package:almas/views/settings/widgets/mobile/ticks/ticks_option_card_mobile.dart';
@@ -29,15 +30,17 @@ class TicksOptionsMobile extends StatelessWidget {
             data: "1,000,000 ${"toman".tr}",
           ),
           const SizedBox(height: 20),
-          ...SettingsConstants.ticks.map((element) {
-            return TickOptionCardMobile(
-              id: presenter.tickID,
-              model: element,
-              onSelected: (id) {
-                presenter.changeTick(id);
-              },
-            );
-          }),
+          TickOptionCardMobile(
+            id: presenter.tickID,
+            model: TickOptionModel(
+              id: "0",
+              name: "blue-tick".tr,
+              tick: MineImages.blueTick,
+            ),
+            onSelected: (id) {
+              presenter.changeTick(id);
+            },
+          ),
         ],
       ),
     );

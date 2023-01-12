@@ -28,28 +28,28 @@ class LanguageHelper {
   }
 
   String convertLocaleToLangName(String localeToConvert) {
-    String langName;
+    late String language;
 
     switch (localeToConvert) {
       case 'en':
-        langName = "English";
+        language = "English";
         break;
       case 'fa':
-        langName = "فارسی";
+        language = "فارسی";
         break;
       case 'fr':
-        langName = "Français";
+        language = "Français";
         break;
       case 'es':
-        langName = "Español";
+        language = "Español";
         break;
       case 'ru':
-        langName = "Русский";
+        language = "Русский";
         break;
       default:
-        langName = "English";
+        language = "English";
     }
 
-    return langName;
+    return language;
   }
 }

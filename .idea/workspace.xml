@@ -14,290 +14,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2398474-14d8-4517-b343-360b63043f41" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/config/styles/related/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/config/styles/related/shadow_styles.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/config/styles/related/text_styles.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/config/styles/styles.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/config/themes/const.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/config/themes/data/eiffel_tower.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/config/themes/data/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/controllers/private/follows_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/controllers/private/posts/filtered_posts_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/controllers/private/posts/private_posts_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/controllers/public/notifications/messaging_eventings.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/controllers/public/notifications/on_received_message_handle.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/private/settings/fonts/setting_fonts_response.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/private/settings/setting_product_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/private/settings/themes/setting_themes_response.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/private/top_users/models/account_score_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/public/pagination_related/pagination_parameters.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/public/user_profile/user_profile_models.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/providers/private/filtered_posts_presenter.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/providers/private/private_posts_presenter.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/providers/private/settings_presenter.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/repositories/permissions/role_permissions.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/requests/account_score/account_score.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/requests/settings/settings.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui_related/builders/center_popup_builder.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui_related/builders/custom_image.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui_related/builders/items_builder/items_builder_handler.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui_related/builders/items_builder/widgets/empty_items_builder_ui.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui_related/builders/items_builder/widgets/go_top_page_items_builder_ui.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui_related/builders/items_builder/widgets/loading_items_builder_ui.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui_related/builders/private_page_loading_builder.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui_related/popups/mobile/comment_options_popup.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui_related/popups/mobile/post_related/edit_post_popup_mobile.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui_related/popups/mobile/post_related/post_options_popup_mobile.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui_related/popups/mobile/question_popup_mobile.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui_related/separated_pieces/mobile/post_bottom_tools_mobile.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui_related/separated_pieces/mobile/post_header_tools_mobile.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/extensions/enum_extension.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/extensions/string_securing_extension.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/validators/regular_expression.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/validators/validators.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/views/edit_password/edit_password.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/views/edit_password/views/mobile/edit_password_mobile.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/views/notifications/widgets/mobile/notification_card_mobile.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/views/posts/widgets/mobile/post_card_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/almas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/almas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/drawable/app_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/boy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/car.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/coast.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/cosmos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/cr7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/dark-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/flowers.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/minium.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/moon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/night.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/paint.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/sea.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/tree.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/backgrounds/trees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/almas_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/almas_android.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/themes/five-theme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/themes/four-theme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/themes/one-theme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/themes/six-theme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/themes/three-theme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/themes/tow-theme.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/config/constants/loading_keys.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/constants/loading_keys.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/constants/settings_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/constants/settings_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/fonts/fonts_handle.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/constants/listening_keys.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/languages/data/en.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/languages/data/en.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/languages/data/fa.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/languages/data/fa.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/languages/data/longs/fa/guide_fa.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/languages/data/longs/fa/guide_fa.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/constants/settings_constants.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/config/languages/extension/tr.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/languages/extension/tr.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/main_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/main_config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/mine_colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/mine_colors.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/languages/helpers/language_helper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/languages/helpers/language_helper.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/config/mine_images.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/mine_images.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/repositories/repositories_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositories/repositories_config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/repositories/repositories_handler.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositories/repositories_handler.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/routes/const.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/routes/const.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/routes/route_generator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/routes/route_generator.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/styles.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/alone_tree.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/tower.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/boy.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/music.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/car.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/cat.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/coast.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/coast.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/cosmos.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/back1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/cr7.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/dark_coast.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/dark.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/dark.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/flowers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/flower.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/green.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/green.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/light.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/light.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/minium.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/minions.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/moon.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/moon.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/mountain.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/dark_plain.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/night.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/lonely_boy.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/orange.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/orange.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/paint.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/magician.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/red.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/red.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/sea.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/girl_moon.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/data/sky.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/data/lonely_girl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/theme_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/themes/theme_config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/themes/theme_handle.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/auth/auth_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/private/auth/auth_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/auth/login_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/private/auth/login_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/auth/signup_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/private/auth/signup_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/blocks_controller.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/comments_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/private/comments_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/follows/follows_controller.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/follows/follows_type_enum.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/messaging_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/public/notifications/messaging_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/posts/posts_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/private/posts/posts_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/posts/user_posts_controller.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/top_users/top_users_controller.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/top_users/top_users_type_enum.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/user_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/public/router_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/user_profile_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/private/others_profile_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/public/loading_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/public/loading_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/public/local_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/public/system_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/public/menu_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/public/menu_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/public/notification_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/public/notifications/notification_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/public/pagination_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/public/pagination_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/public/settings_controller.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/public/splash_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/public/splash_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/rest_api/error_handler.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/rest_api/error_handler.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/rest_api/http_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/rest_api/http_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/rest_api/widgets/errors_request_server_popup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/rest_api/widgets/errors_request_server_popup.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/server_interface/models/server_params_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/server_interface/models/server_params_data.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/server_interface/models/server_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/server_interface/models/server_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/server_interface/server_interface.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/server_interface/server_interface.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/server_interface/server_interface_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/server_interface/server_interface_config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/shared_preference/const.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/shared_preference/const.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/shared_preference/shared_preferences.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/shared_preference/shared_preferences.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/socket_io/base_socket.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/socket_io/base_socket.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/socket_io/const.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/socket_io/const.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/socket_io/models/enums.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/socket_io/models/enums.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/socket_io/models/socket_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/socket_io/models/socket_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/socket_io/socket_handler.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/socket_io/socket_handler.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/private/blocks/blocks_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/private/blocks/blocked_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/private/comments/comments_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/private/comments/comments_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/private/comments/models/comment_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/private/comments/models/comment_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/private/follows/follows_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/private/accounts/accounts_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/private/messaging/messaging_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/private/messaging/messaging_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/private/posts/models/post_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/private/posts/models/post_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/private/posts/posts_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/private/posts/posts_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/private/top_users/models/top_user_model.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/private/top_users/top_users_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/private/top_users/top_users_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/private/user_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/private/user_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/public/enums.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/public/enums.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/public/notification_parameters.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/public/notification_parameters.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/public/pagination_related/link_model.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/public/pagination_related/pagination_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/public/pagination_related/pagination_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/private/blocks_presenter.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/private/comments_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/private/comments_presenter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/private/follows_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/private/follows_presenter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/private/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/private/index.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/private/notifications_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/private/notifications_presenter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/private/posts_presenter.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/private/profile_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/private/account_presenter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/private/search_users_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/private/search_users_presenter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/private/top_users_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/private/top_users_presenter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/private/user_posts_presenter.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/private/user_profile_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/private/others_profile_presenter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/public/loading_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/public/loading_presenter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/permission_repositories.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositories/permissions/loggedin_permissions.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/admin/const.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/requests/admin/const.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/auth/auth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/requests/auth/auth.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/comments/comments.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/requests/comments/comments.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/comments/const.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/requests/comments/const.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/const.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/requests/const.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/follows/const.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/follows/follows.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/messaging/const.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/messaging/messaging.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/posts/const.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/posts/posts.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/requests/posts/posts.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/top_users/const.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/top_users/top_users.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/users/account.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/requests/account/account.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/users/const.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/users_profile/const.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/requests/users_profile/const.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/auxiliary/responsive/base_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/auxiliary/responsive/base_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/builders/bg_builder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/builders/bg_builder.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/builders/mini_loading_builder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/builders/mini_loading_builder.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/builders/pagination_builder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/builders/items_builder/items_builder.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/builders/refresh_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/builders/refresh_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/builders/role_builder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/builders/role_builder.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/buttons/floating_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/buttons/floating_button.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/buttons/main_button_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/buttons/main_button_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/caches_images.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/caches_images.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/cards/mobile/simple_card_mobile.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/cards/mobile/simple_user_card_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/cards/mobile/simple_user_card_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/custom_title.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/custom_title.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/drawer/mobile/drawer_header_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/drawer/mobile/drawer_header_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/drawer/mobile/drawer_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/drawer/mobile/drawer_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/drawer/mobile/drawer_option_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/drawer/mobile/drawer_option_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/flags/mobile/profile_related/blocks_flag_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/flags/mobile/profile_related/blocks_flag_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/flags/mobile/profile_related/friends_flag_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/flags/mobile/profile_related/friends_flag_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/flags/mobile/profile_related/lovers_flag_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/flags/mobile/profile_related/lovers_flag_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/header/header_option.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/header/header_option.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/header/mobile/header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/header/mobile/header.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/inputs/input_area.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/inputs/input_area.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/inputs/input_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/inputs/input_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/minors/badge_on.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/minors/badge_on.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/minors/column_option.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/minors/column_option.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/minors/guide.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/minors/guide.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/minors/line.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/minors/line.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/minors/row_option.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/minors/row_option.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/minors/warning_no_loggedin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/minors/warning_no_loggedin.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/popups/mobile/create_comment_popup_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/popups/mobile/create_comment_popup_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/popups/mobile/posting_popup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/popups/mobile/post_related/create_post_popup_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/popups/mobile/report_mobile_popup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/popups/mobile/report_mobile_popup.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/popups/mobile/send_verification_mobile_popup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/popups/mobile/send_verification_mobile_popup.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/popups/mobile/user_profile_more_mobile_popup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/popups/mobile/others_profile_more_mobile_popup.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/radio_choices/mobile/radio_choice_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/radio_choices/mobile/radio_choice_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/tab/mobile/custom_tab_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/tab/mobile/custom_tab_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils/date_related/date_handle.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/date_related/date_handle.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils/date_related/models/past_time.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/date_related/models/past_time.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils/fonts_related.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils/image_network.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/image_network.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils/popups_opener_builder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/popups_opener_builder.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/blocks/blocks.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/blocks/blocks.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/blocks/views/mobile/blocks_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/blocks/views/mobile/blocks_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/comments/comments.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/comments/comments.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/comments/views/mobile/comments_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/comments/views/mobile/comments_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/comments/widgets/mobile/comment_card_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/comments/widgets/mobile/comment_card_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/comments/widgets/mobile/comment_options_popup.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/comments/widgets/mobile/comment_pinbar_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/comments/widgets/mobile/comment_pinbar_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/edit_profile/views/mobile/edit_profile_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/edit_profile/views/mobile/edit_profile_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/followers/followers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/followers/followers.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/followers/views/mobile/followers_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/followers/views/mobile/followers_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/followings/followings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/followings/followings.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/followings/views/mobile/followings_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/followings/views/mobile/followings_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/forget_password/forget_password.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/forget_password/forget_password.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/forget_password/views/mobile/forget_password_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/forget_password/views/mobile/forget_password_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/friends/friends.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/friends/friends.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/friends/views/mobile/friends_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/friends/views/mobile/friends_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/guides/views/mobile/guides_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/guides/views/mobile/guides_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/home/views/mobile/home_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/home/views/mobile/home_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/index.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/login/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/login/login.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/login/views/mobile/login_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/login/views/mobile/login_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/lovers/lovers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/lovers/lovers.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/lovers/views/mobile/lovers_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/lovers/views/mobile/lovers_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/notifications/notifications.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/notifications/notifications.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/notifications/views/mobile/notifications_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/notifications/views/mobile/notifications_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/posts/posts.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/posts/posts.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/posts/views/mobile/posts_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/posts/views/mobile/posts_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/posts/widgets/mobile/post_card.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/posts/widgets/mobile/post_options_popup.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/profile/profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/profile/profile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/profile/views/mobile/profile_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/profile/views/mobile/profile_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/profile/widgets/mobile/option_counts_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/profile/widgets/mobile/option_counts_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/profile/widgets/mobile/user_header_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/profile/widgets/mobile/user_header_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/replays/replays.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/replays/replays.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/replays/views/mobile/replays_mobile.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/rules/views/mobile/rules_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/rules/views/mobile/rules_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/search_users/views/mobile/search_users_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/search_users/views/mobile/search_users_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/search_users/widgets/mobile/search_user_card_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/search_users/widgets/mobile/search_user_card_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/settings/settings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/settings.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/settings/views/mobile/settings_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/views/mobile/settings_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/fonts/font_option_card_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/fonts/font_option_card_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/fonts/fonts_options_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/fonts/fonts_options_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/header_options_flag_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/header_options_flag_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/themes/theme_option_card_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/themes/theme_option_card_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/themes/themes_options_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/themes/themes_options_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/ticks/ticks_option_card_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/ticks/ticks_option_card_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/controllers/private/others_profile_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/private/others_profile_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data-server/rest_api/http_request.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/requests/admin/admin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/requests/admin/admin.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/requests/admin/const.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/requests/comments/const.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/requests/users_profile/const.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/requests/users_profile/users_profile.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/ticks/ticks_options_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/ticks/ticks_options_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/signup/signup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/signup/signup.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/signup/views/mobile/signup_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/signup/views/mobile/signup_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/splash/splash.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/splash/splash.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/splash/views/mobile/splash_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/splash/views/mobile/splash_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/top_users/views/mobile/top_users_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/top_users/views/mobile/top_users_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/top_users/widgets/mobile/top_user_card_mobile.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/top_users/widgets/mobile/top_users_bodies_mobile.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/user_posts/user_posts.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/private_posts/private_posts.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/user_posts/views/mobile/user_posts_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/private_posts/views/mobile/private_posts_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/user_profile/user_profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/others_profile/others_profile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/user_profile/views/mobile/user_profile_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/others_profile/views/mobile/others_profile_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/user_profile/widgets/mobile/user_header_mobile.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,7 +80,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last.edited.regexp" value="sfdsfsfd.fdssgf" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/ui_related/builders" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />

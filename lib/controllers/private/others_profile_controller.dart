@@ -4,7 +4,6 @@ import 'package:almas/models/public/enums.dart';
 import 'package:almas/providers/private/others_profile_presenter.dart';
 import 'package:almas/repositories/permissions/role_permissions.dart';
 import 'package:almas/repositories/repositories_handler.dart';
-import 'package:almas/requests/users_profile/users_profile.dart';
 import 'package:flutter/widgets.dart';
 
 class OthersProfileController extends OthersProfilePresenter {
@@ -105,14 +104,14 @@ class OthersProfileController extends OthersProfilePresenter {
     required VoidCallback callback,
   }) async {
     if (userID != null) {
-      final result = await UsersProfileService.reportCover(userID, reason);
-      if (result == true) {
-        callback();
-        // PopupOpenerBuilder.toast(
-        //   context,
-        //   content: "your-report-submit".tr,
-        // );
-      }
+      // final result = await UsersProfileService.reportCover(userID, reason);
+      // if (result == true) {
+      //   callback();
+      //   PopupOpenerBuilder.toast(
+      //     context,
+      //     content: "your-report-submit".tr,
+      //   );
+      // }
     }
   }
 
@@ -123,14 +122,14 @@ class OthersProfileController extends OthersProfilePresenter {
     required VoidCallback callback,
   }) async {
     if (userID != null) {
-      final result = await UsersProfileService.reportAvatar(userID, reason);
-      if (result == true) {
-        callback();
-        // PopupOpenerBuilder.toast(
-        //   context,
-        //   content: "your-report-submit".tr,
-        // );
-      }
+      // final result = await UsersProfileService.reportAvatar(userID, reason);
+      // if (result == true) {
+      //   callback();
+      //   PopupOpenerBuilder.toast(
+      //     context,
+      //     content: "your-report-submit".tr,
+      //   );
+      // }
     }
   }
 }

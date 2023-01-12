@@ -1,5 +1,3 @@
-import 'package:almas/models/public/enums.dart';
-
 class LoadingKeys {
   static const login = "login";
   static const register = "register";
@@ -12,11 +10,11 @@ class LoadingKeys {
   static const themes = "themes";
   static const fonts = "fonts";
 
-  static final popularPosts = PostsType.popular.name;
-  static final rooboorsPosts = PostsType.trends.name;
-  static final chosenPosts = PostsType.chosen.name;
-  static final explorePosts = PostsType.explore.name;
-  static final timelinePosts = PostsType.timeline.name;
+  static const popularPosts = "popular";
+  static const rooboorsPosts = "trends";
+  static const chosenPosts = "chosen";
+  static const explorePosts = "explore";
+  static const timelinePosts = "timeline";
   static const createPost = "create-post";
   static const updatePost = "update-post";
 
