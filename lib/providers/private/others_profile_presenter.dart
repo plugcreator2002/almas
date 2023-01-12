@@ -1,0 +1,165 @@
+import 'dart:ui' show VoidCallback;
+
+import 'package:almas/controllers/public/listening_controller.dart';
+import 'package:almas/controllers/public/notifications/messaging_eventings.dart';
+import 'package:almas/models/private/user_model.dart';
+import 'package:almas/models/public/enums.dart';
+import 'package:almas/repositories/permissions/loggedin_permissions.dart';
+import 'package:almas/repositories/permissions/role_permissions.dart';
+import 'package:almas/requests/account/account.dart';
+import 'package:almas/requests/admin/admin.dart';
+import 'package:almas/requests/posts/posts.dart';
+import 'package:flutter/material.dart';
+
+const mainListening = "main-listening";
+const popupListening = "popup-listening";
+
+class OthersProfilePresenter extends Listening {
+  bool loading = true;
+  UserModel? _user;
+  num postsCount = 0;
+  num followingsCount = 0;
+  num followersCount = 0;
+  bool isFollowing = false;
+  bool isFollower = false;
+  bool isBlocking = false;
+
+  UserModel? get user => _user;
+
+  Future<void> follow() async {
+    final userID = user?.id;
+    if (userID != null) {
+      isFollowing = true;
+      followersCount++;
+      callListener(mainListening);
+
+      final result = await AccountService.follow(userID);
+      if (result) {
+        MessagingEventing.instance.follow(userID);
+      } else {
+        isFollowing = false;
+        followersCount--;
+      }
+      callListener(mainListening);
+    }
+  }
+
+  Future<void> unfollow() async {
+    final id = user?.id;
+    if (id != null) {
+      isFollowing = false;
+      followersCount--;
+      callListener(mainListening);
+
+      final result = await AccountService.unFollow(id);
+      if (result) {
+      } else {
+        isFollowing = true;
+        followersCount++;
+      }
+      callListener(mainListening);
+    }
+  }
+
+  Future<void> ban(void Function(UserModel? user) callback) async {
+    final userID = user?.id;
+    if (userID != null) {
+      final result = await AdminService.ban(userID);
+
+      if (result != null) {
+        // user?.isBanned = result;
+        callAllListeners();
+        callback(user);
+      }
+    }
+  }
+
+  Future<void> unban() async {
+    final userID = user?.id;
+    if (userID != null) {
+      final result = await AdminService.unban(userID);
+
+      if (result != null) {
+        // user?.isBanned = result;
+        callAllListeners();
+      }
+    }
+  }
+
+  Future<void> block() async {
+    final userID = user?.id;
+    if (userID != null) {
+      final result = await AccountService.block(userID);
+      if (result) {
+        isBlocking = true;
+        isFollowing = false;
+        callAllListeners();
+      }
+    }
+  }
+
+  Future<void> unblock() async {
+    final id = user?.id;
+    if (id != null) {
+      final result = await AccountService.unBlock(id);
+
+      if (result) {
+        isBlocking = false;
+      }
+    }
+  }
+
+  Future<void> getFollowsRelated(num userID) async {
+    final followersCount = await AccountService.followersCount(userID);
+    final followingsCount = await AccountService.followingsCount(userID);
+    final postsCount = await PostsService.postsCount(userID);
+
+    if (followersCount != null || followingsCount != null) {
+      this.postsCount = postsCount ?? 0;
+      this.followersCount = followersCount ?? 0;
+      this.followingsCount = followingsCount ?? 0;
+    }
+  }
+
+  void isFollowingOrFollower(num userID) async {
+    final result = await AccountService.isFollowingOrFollower(userID);
+    if (result != null) {
+      isFollowing = result["isFollowing"] ?? false;
+      isFollower = result["isFollower"] ?? false;
+      callListener(mainListening);
+    }
+  }
+
+  void isBlocked(num userID) async {
+    final result = await AccountService.isBlocked(userID);
+    isBlocking = result;
+  }
+
+  void changeRole() {
+    LoggedInPermissions.checkHasToken(() async {
+      if (RolePermissions.isSupervisor(user?.role)) {
+      } else if (user?.role == UserRole.user) {}
+    });
+  }
+
+  void init(
+    num? userID, {
+    VoidCallback? listener,
+  }) async {
+    if (listener != null) {
+      addListener(mainListening, listener);
+    }
+    if (userID != null) {
+      final result = await AccountService.findOneUser(userID);
+      if (result != null) {
+        _user = result;
+        callListener(mainListening);
+        await getFollowsRelated(userID);
+        isBlocked(userID);
+        isFollowingOrFollower(userID);
+        loading = false;
+        callListener(mainListening);
+      }
+    }
+  }
+}
