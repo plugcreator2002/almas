@@ -7,6 +7,7 @@ import 'package:almas/models/private/posts/models/post_model.dart';
 import 'package:almas/models/public/enums.dart' show PostsType;
 import 'package:almas/models/public/pagination_related/pagination_parameters.dart';
 import 'package:almas/requests/const.dart';
+import 'package:psr_base/utils/logger.dart';
 
 class PostsService {
   static Future<dynamic> findPosts(
@@ -111,11 +112,14 @@ class PostsService {
     return false;
   }
 
-  static Future<bool> remove(num postID) async {
+  static Future<bool> remove(num postID, [num? userID]) async {
     final response = await ServerInterface.instance.delete(
-      path: "${RoutesAPI.postDelete}/$postID",
+      path: "${RoutesAPI.postDelete}/$postID/${userID ?? ""}",
     );
 
+    logger(
+      "++++++++++++++++++______________%%%%%%%%%%%%% ${response.statusCode}",
+    );
     return response.isSuccess;
   }
 

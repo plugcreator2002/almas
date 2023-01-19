@@ -210,6 +210,34 @@ class AccountService {
     return response.isSuccess;
   }
 
+  static Future<bool?> ban(num userID) async {
+    final response = await ServerInterface.instance.post(
+      path: "${RoutesAPI.accountBan}/$userID",
+    );
+
+    return response.isSuccess;
+  }
+
+  static Future<bool?> unban(num userID) async {
+    final response = await ServerInterface.instance.post(
+      path: "${RoutesAPI.accountUnBan}/$userID",
+    );
+
+    return response.isSuccess;
+  }
+
+  static Future<bool?> changeRole(num userID, String newRole) async {
+    final response = await ServerInterface.instance.patch(
+      path: "${RoutesAPI.accountChangeRole}/$userID",
+      interfaceOptions: ServerInterfaceOptions(
+        // successfulToast: true,
+        data: {"type": newRole},
+      ),
+    );
+
+    return response.isSuccess;
+  }
+
   static Future<dynamic> followings(
     num userID, [
     PaginationParameters? pagination,

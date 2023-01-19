@@ -1,4 +1,6 @@
 import 'package:almas/models/public/enums.dart';
+import 'package:almas/repositories/repositories_handler.dart';
+import 'package:almas/utils/extensions/enum_extension.dart';
 
 class UserModel {
   UserModel({
@@ -42,6 +44,30 @@ class UserModel {
     return roleEnum;
   }
 
+  bool get itsMe {
+    return id == RepositoriesHandler.userData?.id;
+  }
+
+  bool get isAdmin {
+    return role == UserRole.admin;
+  }
+
+  bool get isSupervisor {
+    return role == UserRole.supervisor;
+  }
+
+  bool get isManager {
+    return role == UserRole.manager;
+  }
+
+  bool get isUser {
+    return role == UserRole.user;
+  }
+
+  bool get redTick {
+    return role == UserRole.red;
+  }
+
   UserModel.fromJson(dynamic json) {
     id = json['id'];
     email = json['email'];
@@ -56,8 +82,6 @@ class UserModel {
     refreshToken = json['refreshToken'];
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
-    // logger("RefreshToken: $json");
-    // logger("ROLE: ${json['role']}");
   }
 
   late num id;
@@ -84,7 +108,7 @@ class UserModel {
     map['background'] = background;
     map['bio'] = bio;
     map['mac_address'] = macAddress;
-    map['role'] = role.toString();
+    map['role'] = role.nameEnum;
     map['isActive'] = isActive;
     map['refreshToken'] = refreshToken;
     map['created_at'] = createdAt;

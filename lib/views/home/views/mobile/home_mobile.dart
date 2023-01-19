@@ -1,5 +1,6 @@
 import 'package:almas/config/languages/extension/tr.dart';
 import 'package:almas/config/routes/const.dart';
+import 'package:almas/controllers/private/posts/filtered_posts_controller.dart';
 import 'package:almas/controllers/public/system_controller.dart';
 import 'package:almas/controllers/public/tabs/tab_controller.dart';
 import 'package:almas/controllers/public/tabs/tab_items.dart';
@@ -76,7 +77,9 @@ class _State extends SafeState<HomeMobile> with TickerProviderStateMixin {
           LoggedInPermissions.checkHasToken(() {
             OpeningPopups.showBottomPopup(
               context,
-              view: const CreatePostPopupMobile(),
+              view: CreatePostPopupMobile(
+                controller: FilteredPostsController.instance,
+              ),
             );
           });
         },

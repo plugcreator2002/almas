@@ -46,8 +46,10 @@ class SettingsMobile extends StatelessWidget {
                 labelColor: SystemHandler.theme.system,
                 label: "submit".tr,
                 onTap: () {
-                  context.read<SettingsPresenter>().submit();
-                  Navigator.pushReplacementNamed(context, RouteTags.splash);
+                  final output = context.read<SettingsPresenter>().submit();
+                  if (output) {
+                    Navigator.pushReplacementNamed(context, RouteTags.splash);
+                  }
                 },
               ),
             ),

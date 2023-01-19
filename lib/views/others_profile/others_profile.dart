@@ -3,7 +3,6 @@ import 'package:almas/ui_related/auxiliary/responsive/base_screen.dart';
 import 'package:almas/views/others_profile/views/mobile/others_profile_mobile.dart';
 import 'package:flutter/material.dart';
 import 'package:psr_base/ui_related/builders/safe_state.dart';
-import 'package:psr_base/utils/logger.dart';
 
 class MainOthersProfile extends StatefulWidget {
   final num userID;
@@ -27,7 +26,6 @@ class _MainOthersProfileState extends SafeState<MainOthersProfile> {
       widget.userID,
       listener: () => setState(() {}),
     );
-    logger("..................+++++++....................");
   }
 
   @override

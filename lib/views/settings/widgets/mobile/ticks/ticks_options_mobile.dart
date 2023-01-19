@@ -27,7 +27,7 @@ class TicksOptionsMobile extends StatelessWidget {
         children: [
           HeaderOptionsFlagMobile(
             label: "payment-for-tick".tr,
-            data: "1,000,000 ${"toman".tr}",
+            data: "3,000,000 ${"toman".tr}",
           ),
           const SizedBox(height: 20),
           TickOptionCardMobile(

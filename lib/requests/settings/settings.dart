@@ -6,7 +6,7 @@ import 'package:almas/requests/const.dart';
 class SettingsService {
   static Future<dynamic> themes() async {
     final response = await ServerInterface.instance.get(
-      path: RoutesAPI.settingThemes,
+      path: "${RoutesAPI.settingThemes}?limit=50",
       interfaceOptions: ServerInterfaceOptions(
         loading: LoadingKeys.themes,
         hasUpdateLoading: false,

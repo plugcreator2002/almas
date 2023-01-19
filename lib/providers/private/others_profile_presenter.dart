@@ -4,10 +4,8 @@ import 'package:almas/controllers/public/listening_controller.dart';
 import 'package:almas/controllers/public/notifications/messaging_eventings.dart';
 import 'package:almas/models/private/user_model.dart';
 import 'package:almas/models/public/enums.dart';
-import 'package:almas/repositories/permissions/loggedin_permissions.dart';
 import 'package:almas/repositories/permissions/role_permissions.dart';
 import 'package:almas/requests/account/account.dart';
-import 'package:almas/requests/admin/admin.dart';
 import 'package:almas/requests/posts/posts.dart';
 import 'package:flutter/material.dart';
 
@@ -27,15 +25,14 @@ class OthersProfilePresenter extends Listening {
   UserModel? get user => _user;
 
   Future<void> follow() async {
-    final userID = user?.id;
-    if (userID != null) {
+    if (user?.id != null) {
       isFollowing = true;
       followersCount++;
       callListener(mainListening);
 
-      final result = await AccountService.follow(userID);
+      final result = await AccountService.follow(user!.id);
       if (result) {
-        MessagingEventing.instance.follow(userID);
+        MessagingEventing.instance.follow(user!.id);
       } else {
         isFollowing = false;
         followersCount--;
@@ -45,13 +42,12 @@ class OthersProfilePresenter extends Listening {
   }
 
   Future<void> unfollow() async {
-    final id = user?.id;
-    if (id != null) {
+    if (user?.id != null) {
       isFollowing = false;
       followersCount--;
       callListener(mainListening);
 
-      final result = await AccountService.unFollow(id);
+      final result = await AccountService.unFollow(user!.id);
       if (result) {
       } else {
         isFollowing = true;
@@ -61,35 +57,54 @@ class OthersProfilePresenter extends Listening {
     }
   }
 
-  Future<void> ban(void Function(UserModel? user) callback) async {
-    final userID = user?.id;
-    if (userID != null) {
-      final result = await AdminService.ban(userID);
+  void ban() async {
+    if (user?.id != null) {
+      final result = await AccountService.ban(user!.id);
 
-      if (result != null) {
-        // user?.isBanned = result;
-        callAllListeners();
-        callback(user);
+      if (result == true) {
+        user?.isActive = false;
+        callListener(popupListening);
       }
     }
   }
 
-  Future<void> unban() async {
-    final userID = user?.id;
-    if (userID != null) {
-      final result = await AdminService.unban(userID);
+  void unban() async {
+    if (user?.id != null) {
+      final result = await AccountService.unban(user!.id);
 
-      if (result != null) {
-        // user?.isBanned = result;
-        callAllListeners();
+      if (result == true) {
+        user?.isActive = true;
+        callListener(popupListening);
       }
     }
   }
 
-  Future<void> block() async {
-    final userID = user?.id;
-    if (userID != null) {
-      final result = await AccountService.block(userID);
+  void changeRole() async {
+    if (user?.id != null) {
+      UserRole? role;
+      if (RolePermissions.isSupervisor(user?.role)) {
+        role = UserRole.user;
+      } else if ([UserRole.user, UserRole.manager].contains(
+        user?.role,
+      )) {
+        role = UserRole.supervisor;
+      }
+      if (role != null) {
+        final result = await AccountService.changeRole(
+          user!.id,
+          role.name,
+        );
+        if (result == true) {
+          _user?.role = role;
+          callAllListeners();
+        }
+      }
+    }
+  }
+
+  void block() async {
+    if (user?.id != null) {
+      final result = await AccountService.block(user!.id);
       if (result) {
         isBlocking = true;
         isFollowing = false;
@@ -98,13 +113,13 @@ class OthersProfilePresenter extends Listening {
     }
   }
 
-  Future<void> unblock() async {
-    final id = user?.id;
-    if (id != null) {
-      final result = await AccountService.unBlock(id);
+  void unblock() async {
+    if (user?.id != null) {
+      final result = await AccountService.unBlock(user!.id);
 
       if (result) {
         isBlocking = false;
+        callAllListeners();
       }
     }
   }
@@ -133,13 +148,6 @@ class OthersProfilePresenter extends Listening {
   void isBlocked(num userID) async {
     final result = await AccountService.isBlocked(userID);
     isBlocking = result;
-  }
-
-  void changeRole() {
-    LoggedInPermissions.checkHasToken(() async {
-      if (RolePermissions.isSupervisor(user?.role)) {
-      } else if (user?.role == UserRole.user) {}
-    });
   }
 
   void init(

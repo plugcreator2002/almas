@@ -2,16 +2,17 @@ import 'dart:ui';
 
 import 'package:almas/models/private/posts/models/post_model.dart';
 import 'package:almas/models/private/user_model.dart';
-import 'package:almas/models/public/enums.dart' show UserRole;
 import 'package:almas/repositories/repositories_handler.dart';
 import 'package:almas/utils/date_related/date_handle.dart';
 
 abstract class PostsController {
   bool access(UserModel? user) {
-    if ([
-      user?.id == RepositoriesHandler.userData?.id,
-      UserRole.admin == RepositoriesHandler.userData?.role,
-    ].contains(true)) {
+    final userData = RepositoriesHandler.userData;
+    final conditions = [
+      ((userData?.isAdmin ?? false) || (userData?.isSupervisor ?? false)),
+      (user?.isAdmin == false && user?.isSupervisor == false),
+    ];
+    if (user?.itsMe == true || (conditions[0] && conditions[1])) {
       return true;
     }
 
@@ -30,7 +31,7 @@ abstract class PostsController {
     return false;
   }
 
-  void remove(num? postID) {
+  void remove(num? postID, [num? userID]) {
     if (postID == null) return;
   }
 

@@ -22,6 +22,9 @@ class RoutesAPI {
   static const accountUnBlock = '${baseURL}account/unblock';
   static const accountISBlocked = '${baseURL}account/is-blocked';
   static const accountSearchByUsername = '${baseURL}account/search-by-username';
+  static const accountBan = '${baseURL}account/banned';
+  static const accountUnBan = '${baseURL}account/unbanned';
+  static const accountChangeRole = '${baseURL}account/update-type';
 
   // account-password related
   static const accountPass = "account-password";

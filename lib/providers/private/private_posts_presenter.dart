@@ -51,20 +51,14 @@ class PrivatePostsPresenter extends ParentProvider {
     }
   }
 
-  Future<void> remove(
-    num postID, [
-    VoidCallback? callback,
-  ]) async {
-    final response = await PostsService.remove(postID);
+  Future<void> remove(num postID, [num? userID]) async {
+    final response = await PostsService.remove(postID, userID);
 
     if (response == true) {
       this.response.data?.removeWhere((element) {
         return element.id == postID;
       });
       notifyListeners();
-      if (callback != null) {
-        callback();
-      }
     }
   }
 

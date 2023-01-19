@@ -4,7 +4,6 @@ import 'package:almas/models/public/enums.dart';
 import 'package:almas/providers/private/others_profile_presenter.dart';
 import 'package:almas/repositories/permissions/role_permissions.dart';
 import 'package:almas/repositories/repositories_handler.dart';
-import 'package:flutter/widgets.dart';
 
 class OthersProfileController extends OthersProfilePresenter {
   bool get accessChangeRole {
@@ -13,28 +12,41 @@ class OthersProfileController extends OthersProfilePresenter {
       UserRole.supervisor,
     ].contains(user?.role);
 
-    if (RolePermissions.isAdmin(RepositoriesHandler.userData?.role) &&
-        hasBeen) {
-      return true;
+    final conditions = [
+      hasBeen,
+      RolePermissions.isAdmin(RepositoriesHandler.userData?.role)
+    ];
+    if (conditions.contains(false)) {
+      return false;
     }
-    return false;
+    return true;
   }
 
   String get nameChangingRole {
     if (RolePermissions.isSupervisor(user?.role)) {
       return "set-as-un-moderator".tr;
-    } else if (user?.role == UserRole.user) {
+    } else if ([UserRole.user, UserRole.manager].contains(
+      user?.role,
+    )) {
       return "set-as-moderator".tr;
     }
     return "";
   }
 
+  bool get accessBanUser {
+    final conditions = [
+      RolePermissions.isAdmin(RepositoriesHandler.userData?.role),
+      RolePermissions.isSupervisor(RepositoriesHandler.userData?.role)
+    ];
+    return conditions.contains(true);
+  }
+
   String get nameStatusBan {
-    // if (user?.isBanned == true) {
-    //   return "un-ban".tr;
-    // } else if (user?.isBanned == false) {
-    //   return "ban".tr;
-    // }
+    if (user?.isActive == true) {
+      return "ban".tr;
+    } else if (user?.isActive == false) {
+      return "un-ban".tr;
+    }
     return "";
   }
 
@@ -83,53 +95,10 @@ class OthersProfileController extends OthersProfilePresenter {
   }
 
   void bans() {
-    // if (user?.isBanned == true) {
-    //   unban();
-    // } else if (user?.isBanned == false) {
-    //   ban((user) {
-    //     MessagingController.send(
-    //       event: SubEventsSocket.ban,
-    //       parameters: MessageParameters(
-    //         roomID: user?.id,
-    //       ),
-    //     );
-    //   });
-    // }
-  }
-
-  Future<void> reportCover(
-    BuildContext context, {
-    required String reason,
-    required num? userID,
-    required VoidCallback callback,
-  }) async {
-    if (userID != null) {
-      // final result = await UsersProfileService.reportCover(userID, reason);
-      // if (result == true) {
-      //   callback();
-      //   PopupOpenerBuilder.toast(
-      //     context,
-      //     content: "your-report-submit".tr,
-      //   );
-      // }
-    }
-  }
-
-  Future<void> reportAvatar(
-    BuildContext context, {
-    required num? userID,
-    required String reason,
-    required VoidCallback callback,
-  }) async {
-    if (userID != null) {
-      // final result = await UsersProfileService.reportAvatar(userID, reason);
-      // if (result == true) {
-      //   callback();
-      //   PopupOpenerBuilder.toast(
-      //     context,
-      //     content: "your-report-submit".tr,
-      //   );
-      // }
+    if (user?.isActive == true) {
+      ban();
+    } else if (user?.isActive == false) {
+      unban();
     }
   }
 }

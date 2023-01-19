@@ -1,6 +1,6 @@
 import 'package:almas/config/constants/loading_keys.dart';
 import 'package:almas/config/languages/extension/tr.dart';
-import 'package:almas/controllers/private/posts/filtered_posts_controller.dart';
+import 'package:almas/controllers/private/posts/posts_controller.dart';
 import 'package:almas/controllers/public/system_controller.dart';
 import 'package:almas/ui_related/buttons/main_button_mobile.dart';
 import 'package:almas/ui_related/inputs/input_area.dart';
@@ -8,7 +8,12 @@ import 'package:flutter/material.dart';
 import 'package:psr_base/ui_related/builders/safe_state.dart';
 
 class CreatePostPopupMobile extends StatefulWidget {
-  const CreatePostPopupMobile({Key? key}) : super(key: key);
+  final PostsController controller;
+
+  const CreatePostPopupMobile({
+    Key? key,
+    required this.controller,
+  }) : super(key: key);
 
   @override
   SafeState<CreatePostPopupMobile> createState() {
@@ -40,7 +45,7 @@ class _CreatePostPopupMobileState extends SafeState<CreatePostPopupMobile> {
             loadingKey: LoadingKeys.createPost,
             label: "send".tr,
             onTap: () {
-              FilteredPostsController.instance.create(
+              widget.controller.create(
                 content,
                 () => Navigator.pop(context),
               );

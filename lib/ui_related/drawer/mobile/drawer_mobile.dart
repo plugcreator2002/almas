@@ -88,6 +88,18 @@ class DrawerMobile extends StatelessWidget {
             onPressed: () => MenuController.support(),
           ),
           DrawerOptionMobile(
+            label: "television".tr,
+            icon: Icons.live_tv_outlined,
+          ),
+          DrawerOptionMobile(
+            label: "calendar".tr,
+            icon: Icons.calendar_month_outlined,
+          ),
+          DrawerOptionMobile(
+            label: "challenge".tr,
+            icon: Icons.calendar_month_outlined,
+          ),
+          DrawerOptionMobile(
             label: "sign-out-account".tr,
             icon: Icons.exit_to_app_outlined,
             onPressed: () => AuthController.logoutQuestion(),

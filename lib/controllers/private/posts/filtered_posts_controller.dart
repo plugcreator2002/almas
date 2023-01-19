@@ -26,8 +26,8 @@ class FilteredPostsController extends PostsController {
   }
 
   @override
-  Future<void> remove(num? postID, [VoidCallback? callback]) async {
-    super.remove(postID);
+  Future<void> remove(num? postID, [num? userID]) async {
+    super.remove(postID, userID);
     PopupOpenerBuilder.centerPopup<bool>(
       context,
       child: QuestionPopupMobile(
@@ -35,7 +35,7 @@ class FilteredPostsController extends PostsController {
       ),
     ).then((output) {
       if (output == true) {
-        context.read<FilteredPostsPresenter>().remove(postID ?? -1, callback);
+        context.read<FilteredPostsPresenter>().remove(postID ?? -1, userID);
       }
     });
   }

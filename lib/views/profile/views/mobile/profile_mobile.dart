@@ -15,6 +15,7 @@ import 'package:almas/views/profile/widgets/mobile/option_counts_mobile.dart';
 import 'package:almas/views/profile/widgets/mobile/user_header_mobile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:psr_base/utils/logger.dart';
 
 class ProfileMobile extends StatelessWidget {
   const ProfileMobile({Key? key}) : super(key: key);
@@ -22,6 +23,8 @@ class ProfileMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final presenter = Provider.of<AccountPresenter>(context);
+
+    logger(presenter.profile.role);
 
     return Scaffold(
       backgroundColor: SystemHandler.theme.background,

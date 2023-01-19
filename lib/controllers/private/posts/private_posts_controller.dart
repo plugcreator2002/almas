@@ -25,8 +25,8 @@ class PrivatePostsController extends PostsController {
   }
 
   @override
-  Future<void> remove(num? postID, [VoidCallback? callback]) async {
-    super.remove(postID);
+  Future<void> remove(num? postID, [num? userID]) async {
+    super.remove(postID, userID);
     PopupOpenerBuilder.centerPopup<bool>(
       context,
       child: QuestionPopupMobile(
@@ -34,7 +34,7 @@ class PrivatePostsController extends PostsController {
       ),
     ).then((output) {
       if (output == true) {
-        context.read<PrivatePostsPresenter>().remove(postID!, callback);
+        context.read<PrivatePostsPresenter>().remove(postID!, userID);
       }
     });
   }

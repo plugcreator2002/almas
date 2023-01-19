@@ -72,12 +72,7 @@ class SettingsPresenter extends ParentProvider {
         data: themes.data,
       );
 
-      theme ??= freeThemes[0];
       themes = result;
-      themes.data = [
-        ...freeThemes,
-        ...(themes.data ?? []),
-      ];
       notifyListeners();
     }
   }
@@ -97,17 +92,22 @@ class SettingsPresenter extends ParentProvider {
     notifyListeners();
   }
 
-  void submit() {
-    if (theme != null) {
+  bool submit() {
+    final conditions = [
+      theme != null && RepositoriesHandler.getTheme()?.id != theme?.id,
+      font != null && RepositoriesHandler.getFont()?.id != font?.id,
+    ];
+    if (conditions[0]) {
       RepositoriesHandler.saveTheme(
         theme ?? SettingProductModel(),
       );
     }
-    if (font != null) {
+    if (conditions[1]) {
       RepositoriesHandler.saveFont(
         font ?? SettingProductModel(),
       );
     }
+    return conditions.contains(true);
   }
 
   @override

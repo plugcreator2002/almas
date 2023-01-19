@@ -84,6 +84,10 @@ final faLang = {
   "girlmoon": "دختر ماه",
   "lonelyboy": "پسر تنها",
   "lonelygirl": "دختر تنها",
+  "magician": "شعبده باز",
+  "minions": "مینیون",
+  "music": "موسیقی",
+  "tower": "برج",
 
   'my-gem': 'الماس من',
   'favorites': 'برگزیده',
@@ -117,6 +121,9 @@ final faLang = {
   "contact-support": "ارتباط با پشتیبانی",
   "sign-out-account": "خروج از حساب",
   "contact-us": "ارتباط با ما",
+  "television": "تلویزیون",
+  "calendar": "تقویم",
+  "challenge": "چالش",
 
   // posts
   "ago": "پیش",

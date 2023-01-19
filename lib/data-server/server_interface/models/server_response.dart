@@ -18,7 +18,9 @@ class ServerResponse {
 
   ServerResponse.fromJson(Response response) {
     final json = jsonDecode(response.body);
-    isSuccess = isSuccessful(response.statusCode);
+    isSuccess = isSuccessful(
+      json['statusCode'] ?? response.statusCode,
+    );
     statusCode = json['statusCode'] ?? response.statusCode;
     if (json['data'] != null) {
       data = json['data'];
@@ -27,9 +29,9 @@ class ServerResponse {
       error = json['error'];
     }
     if (json['message'] != null) {
-      if (json['message'] is List) {
+      if (json['message'].runtimeType is List) {
         messages = (json['message'] as List).cast<String>();
-      } else if (json['message'] is String) {
+      } else if (json['message'].runtimeType is String) {
         message = json['message'];
       }
     }

@@ -79,6 +79,10 @@ final enLang = {
   "girlmoon": "Girl Moon",
   "lonelyboy": "Lonely Boy",
   "lonelygirl": "Lonely Girl",
+  "magician": "Magician",
+  "minions": "Minions",
+  "music": "Music",
+  "tower": "Tower",
 
   'my-gem': 'My Gem',
   'favorites': 'Favorites',
@@ -141,6 +145,9 @@ final enLang = {
   "contact-support": "Contact Support",
   "sign-out-account": "Sign Out Account",
   "contact-us": "Contact Us",
+  "television": "Television",
+  "calendar": "Calendar",
+  "challenge": "Challenge",
 
   "do-you-want-to-log-out-of-your-account?":
       "Do you want to log out of your account?",
