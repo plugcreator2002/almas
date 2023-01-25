@@ -14,39 +14,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2398474-14d8-4517-b343-360b63043f41" name="Changes" comment="some files useless deleted">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/config/themes/theme_handle.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/providers/config/parent_providers/posts_parent_provider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/providers/public/notifications_badge_presenter.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/filtered_posts/filtered_posts_explore.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/almas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/almas.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/almas_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/almas_android.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/icons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/icons.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/config/languages/data/en.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/languages/data/en.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/config/languages/data/fa.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/languages/data/fa.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/main_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/main_config.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/mine_icons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/mine_icons.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/controllers/private/auth/signup_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/private/auth/signup_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/controllers/private/others_profile_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/private/others_profile_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/posts/filtered_posts_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/private/posts/filtered_posts_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/controllers/private/posts/posts_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/private/posts/posts_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/private/posts/private_posts_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/private/posts/private_posts_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-server/server_interface/models/server_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/server_interface/models/server_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/private/user_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/private/user_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data-server/server_interface/models/server_params_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/server_interface/models/server_params_data.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data-server/server_interface/server_interface.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/server_interface/server_interface.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data-server/server_interface/server_interface_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/server_interface/server_interface_config.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data-server/socket_io/socket_handler.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/socket_io/socket_handler.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/providers/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/providers/private/filtered_posts_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/private/filtered_posts_presenter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/private/others_profile_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/private/others_profile_presenter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/private/private_posts_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/private/private_posts_presenter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/private/settings_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/private/settings_presenter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/providers/private/notifications_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/private/notifications_presenter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/providers/public/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/public/index.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/requests/account/account.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/requests/account/account.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/admin/admin.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/const.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/requests/const.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/requests/auth/auth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/requests/auth/auth.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/requests/posts/posts.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/requests/posts/posts.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/requests/settings/settings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/requests/settings/settings.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui_related/buttons/main_button_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/buttons/main_button_mobile.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ui_related/drawer/mobile/drawer_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/drawer/mobile/drawer_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/popups/mobile/others_profile_more_mobile_popup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/popups/mobile/others_profile_more_mobile_popup.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui_related/popups/mobile/post_related/create_post_popup_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/popups/mobile/post_related/create_post_popup_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui_related/header/header_option.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/header/header_option.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui_related/header/mobile/header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/header/mobile/header.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui_related/inputs/input_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/inputs/input_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui_related/minors/row_option.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/minors/row_option.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ui_related/popups/mobile/post_related/post_options_popup_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/popups/mobile/post_related/post_options_popup_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui_related/separated_pieces/mobile/post_bottom_tools_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/separated_pieces/mobile/post_bottom_tools_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui_related/separated_pieces/mobile/post_header_tools_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/separated_pieces/mobile/post_header_tools_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/popups_opener_builder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/popups_opener_builder.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/validators/regular_expression.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/validators/regular_expression.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/validators/validators.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/validators/validators.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/edit_profile/views/mobile/edit_profile_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/edit_profile/views/mobile/edit_profile_mobile.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/views/home/views/mobile/home_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/home/views/mobile/home_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/others_profile/others_profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/others_profile/others_profile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/notifications/notifications.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/notifications/notifications.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/notifications/widgets/mobile/notification_card_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/notifications/widgets/mobile/notification_card_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/others_profile/views/mobile/others_profile_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/others_profile/views/mobile/others_profile_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/posts/posts.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/posts/views/mobile/posts_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/filtered_posts/views/filtered_posts_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/posts/widgets/mobile/post_card_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/filtered_posts/widgets/mobile/post_card_mobile.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/views/private_posts/views/mobile/private_posts_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/private_posts/views/mobile/private_posts_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/profile/views/mobile/profile_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/profile/views/mobile/profile_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/settings/views/mobile/settings_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/views/mobile/settings_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/ticks/ticks_options_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/ticks/ticks_options_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/signup/views/mobile/signup_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/signup/views/mobile/signup_mobile.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,29 +107,29 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last.edited.regexp" value="sfdsfsfd.fdssgf" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last.edited.regexp" value="dsdsds_sdsdsdsds//." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/views/_posts/screens" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="http.proxy" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\views\_posts\screens" />
+      <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\providers\public" />
       <recent name="F:\Developing\Dart.Flutter\Projects\almas.v3\lib\ui_related\builders" />
       <recent name="F:\Developing\Dart.Flutter\Projects\almas.v3\lib\controllers\private\posts" />
       <recent name="F:\Developing\Dart.Flutter\Projects\almas.v3\lib\config\themes\data" />
-      <recent name="F:\Developing\Dart.Flutter\Projects\almas.v3\lib\views" />
-      <recent name="F:\Developing\Dart.Flutter\Projects\almas.v3\lib\utils\extensions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\views\filtered_posts" />
+      <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\views\_posts\screens" />
+      <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\views\_posts\posts\views" />
+      <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\views\_posts" />
       <recent name="F:\Developing\Dart.Flutter\Projects\almas.v3\lib\views\notifications\widgets\mobile" />
-      <recent name="F:\Developing\Dart.Flutter\Projects\almas.v3\lib\ui_related\popups\mobile" />
-      <recent name="F:\Developing\Dart.Flutter\Projects\almas.v3\lib\config\styles" />
-      <recent name="F:\Developing\Dart.Flutter\Projects\almas.v3\lib\controllers\public" />
-      <recent name="F:\Developing\Dart.Flutter\Projects\almas.v3\lib\controllers\public\notifications" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -152,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673528579023</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="some files useless deleted">
+      <created>1674145888718</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674145888719</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

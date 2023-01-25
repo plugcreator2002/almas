@@ -5,6 +5,13 @@ import 'package:almas/models/public/pagination_related/pagination_parameters.dar
 import 'package:almas/providers/config/parent_provider.dart';
 import 'package:almas/requests/posts/posts.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:psr_base/utils/logger.dart';
+
+extension FutureVoider on Future<void> {
+  void on() {
+    then((value) {});
+  }
+}
 
 class FilteredPostsPresenter extends ParentProvider {
   PostsResponse response = PostsResponse();
@@ -12,15 +19,33 @@ class FilteredPostsPresenter extends ParentProvider {
 
   void clear() {
     response = PostsResponse();
-    notifyListeners();
+    // notifyListeners();
   }
 
   Future<void> get(
     PostsType type, [
     PaginationParameters? pagination,
   ]) async {
+    if (type != this.type) {
+      this.response = PostsResponse();
+    }
     this.type = type;
     final response = await PostsService.findPosts(type, pagination);
+
+    if (response == "Need-Token") {
+      logger(
+        "****************************$response****************************",
+      );
+      get(type, pagination);
+      return;
+    }
+    logger(
+      "______________________________Then Again Called Function______________________________",
+    );
+    logger(response);
+    logger(
+      "______________________________Then Again Called Function______________________________",
+    );
 
     if (response != null) {
       final result = PostsResponse.fromJson(

@@ -1,12 +1,12 @@
+import 'package:almas/config/constants/loading_keys.dart';
+import 'package:almas/controllers/public/loading_controller.dart';
 import 'package:almas/data-server/socket_io/base_socket.dart';
 import 'package:almas/data-server/socket_io/const.dart';
 import 'package:almas/models/private/messaging/messaging_model.dart';
 import 'package:almas/providers/config/parent_provider.dart';
 import 'package:almas/repositories/repositories_handler.dart';
-import 'package:psr_base/utils/logger.dart';
 
 class NotificationsPresenter extends ParentProvider {
-  num count = 0;
   num firstUnseen = 0;
   List<MessagingModel> notifications = [];
 
@@ -20,7 +20,6 @@ class NotificationsPresenter extends ParentProvider {
         (element) => element.observed == 1,
       );
 
-      logger("FirstIndex: $index");
       firstUnseen = index;
       notifications = data;
       notifyListeners();
@@ -28,22 +27,19 @@ class NotificationsPresenter extends ParentProvider {
   }
 
   void getItems() {
+    notifications = [];
+    LoadingController.instance.create(
+      LoadingKeys.notifications,
+      hasUpdate: false,
+    );
     SocketIOServices.instance.send(
       SubEventsSocket.notificationShow,
       data: {"roomId": RepositoriesHandler.getUserData?.id},
     );
   }
 
-  void getCount() {
-    SocketIOServices.instance.send(
-      SubEventsSocket.messagesCount,
-      data: {"roomId": RepositoriesHandler.getUserData?.id},
-    );
-  }
-
   void seen(num? id, num? userID, int index) {
-    notifications[index].observed = 1;
-    if (count > 0) count--;
+    // notifications[index].observed = 1;
     SocketIOServices.instance.send(
       SubEventsSocket.notificationSeen,
       data: {"notificationId": id, "roomId": userID},
@@ -63,17 +59,7 @@ class NotificationsPresenter extends ParentProvider {
 
     if (data?.event == PubEventsSocket.notificationShow) {
       setItems(data?.data);
-    } else if (data?.event == PubEventsSocket.messagesCount) {
-      if (data?.data != null && data?.data is num) {
-        count = data?.data;
-        notifyListeners();
-      }
-    } else if (data?.event == PubEventsSocket.messagesSeen) {
-      if (count == 0) {
-        Future.delayed(const Duration(seconds: 15), () {
-          notifyListeners();
-        });
-      }
+      LoadingController.instance.close(LoadingKeys.notifications);
     }
   }
 }

@@ -9,7 +9,7 @@ abstract class PostsController {
   bool access(UserModel? user) {
     final userData = RepositoriesHandler.userData;
     final conditions = [
-      ((userData?.isAdmin ?? false) || (userData?.isSupervisor ?? false)),
+      (userData?.isAdmin == true || userData?.isSupervisor == true),
       (user?.isAdmin == false && user?.isSupervisor == false),
     ];
     if (user?.itsMe == true || (conditions[0] && conditions[1])) {

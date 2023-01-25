@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:almas/config/constants/loading_keys.dart';
+import 'package:almas/config/languages/extension/tr.dart';
 import 'package:almas/controllers/public/system_controller.dart';
 import 'package:almas/data-server/server_interface/models/server_params_data.dart';
 import 'package:almas/data-server/server_interface/server_interface.dart';
@@ -43,6 +44,7 @@ class AuthService {
         successfulToast: true,
         checkExpiredToken: false,
         loading: LoadingKeys.register,
+        messageToast: "please-open-your-email...".tr,
       ),
     );
 

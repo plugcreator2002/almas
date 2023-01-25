@@ -108,6 +108,7 @@ final enLang = {
   'friends': "Friends",
   "unfollow": "unFollow",
   "follow": "Follow",
+  "you-follow": "You follow",
   "set-as-moderator": "Set as moderator",
   "set-as-un-moderator": "Set as unModerator",
   "ban": "Ban",
@@ -137,11 +138,14 @@ final enLang = {
   "not-logged-in-yet?": "Not Logged In Yet?",
   "my-profile": "My Profile",
   "setting": "Setting",
+  "settings/store": "Settings / Store",
   "rules": "Rules",
   "introduce-to-friends": "Introduce To Friends",
   "top-users": "Top Users",
   "telegram-channel": "Telegram Channel",
+  "telegram": "Telegram",
   "instagram-page": "Instagram Page",
+  "instagram": "Instagram",
   "contact-support": "Contact Support",
   "sign-out-account": "Sign Out Account",
   "contact-us": "Contact Us",
@@ -203,4 +207,7 @@ final enLang = {
   "504-error-server": "Gateway Time-out",
   "505-error-server": "HTTP Version not supported",
   "default-error-server": "Unknown http status code",
+
+  "please-open-your-email...":
+      "Please open your email and verify the created account",
 };

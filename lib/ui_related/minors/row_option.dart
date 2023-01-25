@@ -2,6 +2,7 @@ import 'package:almas/controllers/public/system_controller.dart';
 import 'package:flutter/material.dart';
 
 class RowOption extends StatelessWidget {
+  final Color? mainColor;
   final String? image;
   final double imageWidth;
   final double imageHeight;
@@ -27,6 +28,7 @@ class RowOption extends StatelessWidget {
     this.image,
     this.imageWidth = 20,
     this.imageHeight = 20,
+    this.mainColor,
   }) : super(key: key);
 
   @override
@@ -56,7 +58,7 @@ class RowOption extends StatelessWidget {
             Icon(
               icon,
               size: iconSize,
-              color: iconColor ?? SystemHandler.theme.info,
+              color: mainColor ?? iconColor ?? SystemHandler.theme.info,
             ),
           ] else if (image != null) ...[
             Image.asset(
@@ -74,7 +76,8 @@ class RowOption extends StatelessWidget {
               style: TextStyle(
                 fontFamily: SystemHandler.family,
                 fontSize: labelSize,
-                color: labelColor ?? SystemHandler.theme.upsideSystem,
+                color:
+                    mainColor ?? labelColor ?? SystemHandler.theme.upsideSystem,
               ),
             ),
           ],

@@ -36,9 +36,9 @@ class OthersProfileController extends OthersProfilePresenter {
   bool get accessBanUser {
     final conditions = [
       RolePermissions.isAdmin(RepositoriesHandler.userData?.role),
-      RolePermissions.isSupervisor(RepositoriesHandler.userData?.role)
+      RolePermissions.isSupervisor(RepositoriesHandler.userData?.role),
     ];
-    return conditions.contains(true);
+    return conditions.contains(true) && user?.isAdmin == false;
   }
 
   String get nameStatusBan {
@@ -63,7 +63,7 @@ class OthersProfileController extends OthersProfilePresenter {
       return "unblock".tr;
     } else {
       if (isFollowing) {
-        return "unfollow".tr;
+        return "you-follow".tr;
       } else {
         return "follow".tr;
       }

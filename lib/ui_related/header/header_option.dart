@@ -1,6 +1,6 @@
 import 'package:almas/config/routes/const.dart';
 import 'package:almas/controllers/public/system_controller.dart';
-import 'package:almas/providers/private/notifications_presenter.dart';
+import 'package:almas/providers/public/notifications_badge_presenter.dart';
 import 'package:almas/repositories/permissions/loggedin_permissions.dart';
 import "package:almas/ui_related/buttons/fade_button.dart";
 import 'package:almas/ui_related/minors/badge_on.dart';
@@ -33,7 +33,7 @@ class HeaderOptions {
     List<Widget> options = [];
 
     if (notification) {
-      final presenter = Provider.of<NotificationsPresenter>(context);
+      final presenter = Provider.of<NotificationsBadgePresenter>(context);
       actions = [
         OptionsPressed(
           icon: Icons.notifications_none_sharp,

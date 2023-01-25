@@ -61,10 +61,7 @@ class _SignUpMobileState extends SafeState<SignUpMobile> {
               prefixIcon: Icons.person_outline_rounded,
               data: controller.username,
               textInputAction: TextInputAction.next,
-              validator: FormValidators.compose([
-                FormValidators.required(context),
-                CustomValidators.username(context),
-              ]),
+              validator: CustomValidators.username(context),
               onChanged: (content) {
                 controller.username = content;
               },

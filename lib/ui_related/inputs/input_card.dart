@@ -193,14 +193,7 @@ class _InputCardState extends SafeState<InputCard> {
                 borderRadius: BorderRadius.circular(4),
               ),
               child: TextFormField(
-                onFieldSubmitted: (content) {
-                  if (widget.textInputAction == TextInputAction.next) {
-                    node.requestFocus();
-                  }
-                  if (widget.onFieldSubmitted != null) {
-                    widget.onFieldSubmitted!(content);
-                  }
-                },
+                // textDirection: TextDirection.rtl,
                 enabled: widget.enabled,
                 initialValue: state.value,
                 maxLength: widget.maxLength,
@@ -211,6 +204,14 @@ class _InputCardState extends SafeState<InputCard> {
                 obscureText: obscure,
                 onChanged: (data) => state.didChange(data),
                 textAlignVertical: TextAlignVertical.center,
+                onFieldSubmitted: (content) {
+                  if (widget.textInputAction == TextInputAction.next) {
+                    node.requestFocus();
+                  }
+                  if (widget.onFieldSubmitted != null) {
+                    widget.onFieldSubmitted!(content);
+                  }
+                },
                 style: TextStyle(
                   fontFamily: SystemHandler.family,
                   fontSize: 14,

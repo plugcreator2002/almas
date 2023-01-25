@@ -28,7 +28,7 @@ class CustomHeaderMobile extends StatelessWidget with PreferredSizeWidget {
   Size get preferredSize => Size(double.infinity, height);
 
   @override
-  Widget build(BuildContext context) {
+  build(context) {
     return AppBar(
       leading: const SizedBox(),
       automaticallyImplyLeading: true,

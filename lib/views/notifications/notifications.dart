@@ -22,7 +22,7 @@ class _MainNotificationsState extends SafeState<MainNotifications> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  build(context) {
     return WillPopScope(
       onWillPop: () async => true,
       child: const BaseWidgets(

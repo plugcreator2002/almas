@@ -8,6 +8,7 @@ import 'package:almas/data-server/server_interface/models/server_response.dart';
 import 'package:almas/data-server/shared_preference/shared_preferences.dart';
 import 'package:almas/utils/popups_opener_builder.dart';
 import 'package:http/http.dart' as http;
+import 'package:psr_base/utils/logger.dart';
 
 class RequestInterfaceTools {
   final header = {
@@ -38,7 +39,7 @@ class RequestInterfaceTools {
     if (response.statusCode == 401 && options.checkExpiredToken) {
       final result = await AuthController.refreshToken();
       if (result) {
-        return ServerResponse();
+        return ServerResponse(statusCode: 401);
       }
     }
 
@@ -52,16 +53,21 @@ class RequestInterfaceTools {
 
     final result = ServerResponse.fromJson(response);
 
-    if (options.successfulToast) {
-      PopupOpenerBuilder.toast(
-        content: result.messages?[0] ?? result.message ?? "",
-      );
+    if (result.isSuccess && options.successfulToast) {
+      String message = result.messages?[0] ?? result.message ?? "";
+      if (message.isEmpty && options.messageToast != null) {
+        message = options.messageToast ?? "";
+      }
+      if (message.isNotEmpty) {
+        PopupOpenerBuilder.toast(content: message);
+      }
     }
 
     return result;
   }
 
   Future<ServerResponse> errorResponse(String error) async {
+    logger(error);
     final response = http.Response(
       jsonEncode({"statusCode": 406, "error": error}),
       406,

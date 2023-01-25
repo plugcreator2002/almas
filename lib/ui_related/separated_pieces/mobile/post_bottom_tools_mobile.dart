@@ -1,5 +1,7 @@
 import 'package:almas/config/mine_icons.dart';
 import 'package:almas/config/routes/const.dart';
+import 'package:almas/config/themes/data/light.dart';
+import 'package:almas/config/themes/theme_handle.dart';
 import 'package:almas/controllers/private/posts/posts_controller.dart';
 import 'package:almas/controllers/public/system_controller.dart';
 import 'package:almas/models/private/posts/models/post_model.dart';
@@ -41,6 +43,15 @@ class _PostBottomToolsMobileState extends State<PostBottomToolsMobile> {
       children: [
         RowOption(
           icon: MineIcons.calender,
+          iconColor: ThemeHandle.separateColor(
+            [LightTheme],
+            SystemHandler.theme.textDisabled,
+          ),
+          labelColor: ThemeHandle.separateColor(
+            [LightTheme],
+            SystemHandler.theme.textDisabled,
+            SystemHandler.theme.upsideSystem,
+          ),
           label: DateHandle.agoTimeStamp(
             widget.model.createdAt,
           ).toString(),
@@ -50,6 +61,11 @@ class _PostBottomToolsMobileState extends State<PostBottomToolsMobile> {
             RowOption(
               textDirection: TextDirection.ltr,
               label: "$likesCount",
+              labelColor: ThemeHandle.separateColor(
+                [LightTheme],
+                SystemHandler.theme.textDisabled,
+                SystemHandler.theme.upsideSystem,
+              ),
               image: [
                 SystemHandler.theme.imageGem,
                 SystemHandler.theme.imageGemEmpty,
@@ -75,6 +91,15 @@ class _PostBottomToolsMobileState extends State<PostBottomToolsMobile> {
               icon: MineIcons.message,
               textDirection: TextDirection.ltr,
               label: "${widget.model.commentCount}",
+              iconColor: ThemeHandle.separateColor(
+                [LightTheme],
+                SystemHandler.theme.textDisabled,
+              ),
+              labelColor: ThemeHandle.separateColor(
+                [LightTheme],
+                SystemHandler.theme.textDisabled,
+                SystemHandler.theme.upsideSystem,
+              ),
               onTap: () {
                 Navigator.pushNamed(
                   context,

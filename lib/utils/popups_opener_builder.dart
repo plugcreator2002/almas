@@ -25,7 +25,7 @@ class PopupOpenerBuilder {
         content,
         textAlign: TextAlign.start,
         style: TextStyle(
-          fontSize: 12,
+          fontSize: 12.5,
           color: contentColor ?? Colors.white,
           fontFamily: SystemHandler.family,
         ),

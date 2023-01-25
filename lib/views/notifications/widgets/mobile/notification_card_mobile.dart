@@ -36,13 +36,14 @@ class _NotificationCardMobileState extends SafeState<NotificationCardMobile> {
   void initState() {
     super.initState();
     if (notification.observed == 0) {
+      context.read<NotificationsPresenter>().seen(
+            notification.id,
+            notification.accountId,
+            widget.index,
+          );
+
       Future.delayed(const Duration(seconds: 8), () {
         setState(() => notification.observed = 1);
-        context.read<NotificationsPresenter>().seen(
-              notification.id,
-              notification.accountId,
-              widget.index,
-            );
       });
     }
   }

@@ -1,4 +1,5 @@
 import 'package:almas/config/languages/extension/tr.dart';
+import 'package:almas/config/mine_icons.dart';
 import 'package:almas/config/routes/const.dart';
 import 'package:almas/controllers/private/auth/auth_controller.dart';
 import 'package:almas/controllers/public/menu_controller.dart';
@@ -37,15 +38,6 @@ class DrawerMobile extends StatelessWidget {
             },
           ),
           DrawerOptionMobile(
-            label: "setting".tr,
-            icon: Icons.settings,
-            onPressed: () {
-              LoggedInPermissions.checkHasToken(() {
-                Navigator.pushNamed(context, RouteTags.settings);
-              });
-            },
-          ),
-          DrawerOptionMobile(
             label: "rules".tr,
             icon: Icons.menu_book_outlined,
             onPressed: () {
@@ -56,7 +48,7 @@ class DrawerMobile extends StatelessWidget {
           ),
           DrawerOptionMobile(
             label: "guide".tr,
-            icon: Icons.info_outline_rounded,
+            icon: MineIcons.help,
             onPressed: () {
               LoggedInPermissions.checkHasToken(() {
                 Navigator.pushNamed(context, RouteTags.guides);
@@ -64,28 +56,22 @@ class DrawerMobile extends StatelessWidget {
             },
           ),
           DrawerOptionMobile(
+            label: "settings/store".tr,
+            icon: Icons.settings,
+            onPressed: () {
+              LoggedInPermissions.checkHasToken(() {
+                Navigator.pushNamed(context, RouteTags.settings);
+              });
+            },
+          ),
+          DrawerOptionMobile(
             label: "top-users".tr,
-            icon: Icons.person_add_outlined,
+            icon: MineIcons.chart,
             onPressed: () {
               LoggedInPermissions.checkHasToken(() {
                 Navigator.pushNamed(context, RouteTags.topUsers);
               });
             },
-          ),
-          DrawerOptionMobile(
-            label: "telegram-channel".tr,
-            icon: FontAwesomeIcons.telegram,
-            onPressed: () => MenuController.openTelegram(),
-          ),
-          DrawerOptionMobile(
-            label: "instagram-page".tr,
-            icon: FontAwesomeIcons.instagram,
-            onPressed: () => MenuController.openInstagram(),
-          ),
-          DrawerOptionMobile(
-            label: "contact-us".tr,
-            icon: Icons.email_outlined,
-            onPressed: () => MenuController.support(),
           ),
           DrawerOptionMobile(
             label: "television".tr,
@@ -97,7 +83,22 @@ class DrawerMobile extends StatelessWidget {
           ),
           DrawerOptionMobile(
             label: "challenge".tr,
-            icon: Icons.calendar_month_outlined,
+            icon: MineIcons.gift,
+          ),
+          DrawerOptionMobile(
+            label: "telegram".tr,
+            icon: FontAwesomeIcons.telegram,
+            onPressed: () => MenuController.openTelegram(),
+          ),
+          DrawerOptionMobile(
+            label: "instagram".tr,
+            icon: FontAwesomeIcons.instagram,
+            onPressed: () => MenuController.openInstagram(),
+          ),
+          DrawerOptionMobile(
+            label: "contact-us".tr,
+            icon: Icons.email_outlined,
+            onPressed: () => MenuController.support(),
           ),
           DrawerOptionMobile(
             label: "sign-out-account".tr,

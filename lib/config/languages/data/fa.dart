@@ -47,6 +47,7 @@ final faLang = {
 
   // settings
   "settings": "تنظیمات",
+  "settings/store": "تنظیمات / فروشگاه",
   "payment-for-any-font": "هزینه قابل پرداخت برای هر فونت",
   "payment-for-any-theme": "هزینه قابل پرداخت برای هر تم",
   "payment-for-tick": "پرداخت برای تیک",
@@ -117,7 +118,9 @@ final faLang = {
   "introduce-to-friends": "معرفی به دوستان",
   "top-users": "کاربران برتر",
   "telegram-channel": "کانال تلگرام",
+  "telegram": "تلگرام",
   "instagram-page": "پیج اینستاگرام",
+  "instagram": "اینستاگرام",
   "contact-support": "ارتباط با پشتیبانی",
   "sign-out-account": "خروج از حساب",
   "contact-us": "ارتباط با ما",
@@ -143,6 +146,7 @@ final faLang = {
   'friends': "دوستان",
   "unfollow": "لغو دنبال کردن",
   "follow": "دنبال کردن",
+  "you-follow": "دنبال میکنید",
   "set-as-moderator": "تنظیم بعنوان ناظر",
   "set-as-un-moderator": "خلع ناظر",
   "ban": "بن",
@@ -209,4 +213,7 @@ final faLang = {
   "504-error-server": "Gateway Time-out",
   "505-error-server": "HTTP Version not supported",
   "default-error-server": "Unknown http status code",
+
+  "please-open-your-email...":
+      "لطفا ایمیل خود را باز کنید و حساب ایجاد شده را تأیید کنید",
 };

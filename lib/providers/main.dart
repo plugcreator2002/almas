@@ -44,6 +44,10 @@ class GlobalProvider extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           lazy: true,
+          create: (_) => NotificationsBadgePresenter(),
+        ),
+        ChangeNotifierProvider(
+          lazy: true,
           create: (_) => SettingsPresenter(),
         ),
         ChangeNotifierProvider(

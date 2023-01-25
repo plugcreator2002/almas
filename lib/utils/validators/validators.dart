@@ -1,23 +1,23 @@
 import 'package:almas/utils/validators/regular_expression.dart';
 import 'package:flutter/material.dart' show BuildContext, FormFieldValidator;
+import 'package:psr_base/plugin_emulators/forms_builder/utils/form_builder_validators.dart';
 
 class CustomValidators {
   static FormFieldValidator<String> username(
     BuildContext context, {
     String? error,
   }) {
-    return (candidate) {
-      if (candidate == null) return "";
-
-      final conditions = [
-        RegularExpression.username.hasMatch(candidate),
-        RegularExpression.enLetters.hasMatch(candidate)
-      ];
-      if (conditions[0] && conditions[1]) {
-        return null;
+    return FormValidators.compose([
+      FormValidators.minLength(context, 6),
+      FormValidators.maxLength(context, 30),
+      (candidate) {
+        if (candidate == null) return "";
+        if (RegularExpression.username.hasMatch(candidate)) {
+          return null;
+        }
+        return "";
       }
-      return "";
-    };
+    ]);
   }
 
   static FormFieldValidator<String> password(

@@ -5,7 +5,6 @@ import 'package:almas/repositories/repositories_handler.dart';
 import 'package:almas/ui_related/minors/row_option.dart';
 import 'package:almas/ui_related/popups/mobile/post_related/edit_post_popup_mobile.dart';
 import 'package:flutter/material.dart';
-import 'package:psr_base/utils/logger.dart';
 import 'package:psr_base/utils/popups/opening_popups.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -21,7 +20,6 @@ class PostOptionsPopupMobile extends StatelessWidget {
 
   @override
   build(context) {
-    logger(model.account?.role);
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,

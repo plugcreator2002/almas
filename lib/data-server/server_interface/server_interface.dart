@@ -11,6 +11,7 @@ import 'package:share_plus/share_plus.dart';
 
 class ServerInterface extends RequestInterfaceTools {
   static ServerInterface instance = ServerInterface();
+  bool loggerEnabled = false;
 
   Future<ServerResponse> get({
     required String path,
@@ -34,7 +35,7 @@ class ServerInterface extends RequestInterfaceTools {
     path += params;
 
     try {
-      logger("Cookies: ${instance.header["Cookie"]}");
+      logger("Cookies: ${instance.header["Cookie"]}", loggerEnabled);
       final response = await http.get(
         Uri.parse(path),
         headers: instance.header,
@@ -63,7 +64,7 @@ class ServerInterface extends RequestInterfaceTools {
     final options = configOptions(interfaceOptions);
 
     try {
-      logger("Cookies: ${instance.header["Cookie"]}");
+      logger("Cookies: ${instance.header["Cookie"]}", loggerEnabled);
       final response = await http.post(
         Uri.parse(path),
         body: json.encode(options.data),
@@ -93,7 +94,7 @@ class ServerInterface extends RequestInterfaceTools {
     final options = configOptions(interfaceOptions);
 
     try {
-      logger("Cookies: ${instance.header["Cookie"]}");
+      logger("Cookies: ${instance.header["Cookie"]}", loggerEnabled);
       final response = await http.put(
         Uri.parse(path),
         body: json.encode(options.data),
@@ -123,7 +124,7 @@ class ServerInterface extends RequestInterfaceTools {
     final options = configOptions(interfaceOptions);
 
     try {
-      logger("Cookies: ${instance.header["Cookie"]}");
+      logger("Cookies: ${instance.header["Cookie"]}", loggerEnabled);
       final response = await http.patch(
         Uri.parse(path),
         body: json.encode(options.data),
@@ -153,7 +154,7 @@ class ServerInterface extends RequestInterfaceTools {
     final options = configOptions(interfaceOptions);
 
     try {
-      logger("Cookies: ${instance.header["Cookie"]}");
+      logger("Cookies: ${instance.header["Cookie"]}", loggerEnabled);
       final response = await http.delete(
         Uri.parse(path),
         body: json.encode(options.data),

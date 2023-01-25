@@ -5,6 +5,7 @@ import 'package:almas/data-server/server_interface/server_interface.dart';
 import 'package:almas/models/private/user_model.dart';
 import 'package:almas/models/public/pagination_related/pagination_parameters.dart';
 import 'package:almas/requests/const.dart';
+import 'package:psr_base/utils/logger.dart';
 import 'package:share_plus/share_plus.dart' show XFile;
 
 class AccountService {
@@ -214,6 +215,8 @@ class AccountService {
     final response = await ServerInterface.instance.post(
       path: "${RoutesAPI.accountBan}/$userID",
     );
+
+    logger(response.toJson());
 
     return response.isSuccess;
   }

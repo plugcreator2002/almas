@@ -3,6 +3,7 @@ class ServerInterfaceOptions {
     Map<String, dynamic>? data,
     this.needToken = true,
     this.loading,
+    this.messageToast,
     this.hasUpdateLoading = true,
     this.checkExpiredToken = true,
     this.successfulToast = false,
@@ -16,6 +17,7 @@ class ServerInterfaceOptions {
   Map<String, dynamic> data = {};
   bool needToken;
   String? loading;
+  String? messageToast;
   bool? hasUpdateLoading;
   Map<String, String> header = {};
   bool checkExpiredToken;

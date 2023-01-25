@@ -11,7 +11,7 @@ import 'package:almas/ui_related/buttons/floating_button.dart';
 import 'package:almas/ui_related/header/header_option.dart';
 import 'package:almas/ui_related/header/mobile/header.dart';
 import 'package:almas/ui_related/popups/mobile/post_related/create_post_popup_mobile.dart';
-import 'package:almas/views/posts/widgets/mobile/post_card_mobile.dart';
+import 'package:almas/views/filtered_posts/widgets/mobile/post_card_mobile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:psr_base/utils/popups/opening_popups.dart';

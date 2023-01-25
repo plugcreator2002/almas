@@ -14,14 +14,14 @@ class MainConfig {
 
   static final Iterable<LocalizationsDelegate> localizationsDelegates = [
     const AppLocalizationDelegate(),
+    GlobalCupertinoLocalizations.delegate,
     GlobalMaterialLocalizations.delegate,
     GlobalWidgetsLocalizations.delegate,
-    GlobalCupertinoLocalizations.delegate,
   ];
 
   static final Iterable<Locale> supportedLocales = [
-    const Locale('en'),
-    const Locale('fa'),
+    const Locale("en", "US"),
+    const Locale("fa", "IR"),
   ];
 
   static Widget builder(BuildContext context, Widget? widget) {

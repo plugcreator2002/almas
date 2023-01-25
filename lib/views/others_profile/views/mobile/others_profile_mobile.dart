@@ -1,4 +1,5 @@
 import 'package:almas/config/languages/extension/tr.dart';
+import 'package:almas/config/mine_icons.dart';
 import 'package:almas/config/routes/const.dart';
 import 'package:almas/controllers/private/others_profile_controller.dart';
 import 'package:almas/controllers/public/system_controller.dart';
@@ -68,7 +69,9 @@ class OthersProfileMobile extends StatelessWidget {
               Center(
                 child: MainButtonMobile(
                   height: 38,
-                  width: 125,
+                  width: 140,
+                  iconSize: 18,
+                  icon: controller.isFollowing ? MineIcons.done : null,
                   mainAxisSize: MainAxisSize.min,
                   label: controller.followsStatus,
                   onTap: () {

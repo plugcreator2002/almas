@@ -24,15 +24,19 @@ class PostsService {
       ),
     );
 
+    if (response.statusCode == 401) {
+      return "Need-Token";
+    }
+
     final conditions = [
       response.isSuccess && response.data != null,
       response.data["filteredPosts"] != null,
       response.data["filteredPosts"] is List,
     ];
-    if (conditions.contains(false)) {
-      return null;
+    if (conditions[0] && conditions[1] && conditions[2]) {
+      return response.data;
     }
-    return response.data;
+    return null;
   }
 
   static Future<PostModel?> findPostById(num id) async {

@@ -4,7 +4,7 @@ import 'package:almas/controllers/private/posts/filtered_posts_controller.dart';
 import 'package:almas/controllers/public/system_controller.dart';
 import 'package:almas/controllers/public/tabs/tab_controller.dart';
 import 'package:almas/controllers/public/tabs/tab_items.dart';
-import 'package:almas/models/public/enums.dart' show PostsType;
+import 'package:almas/models/public/enums.dart';
 import 'package:almas/repositories/permissions/loggedin_permissions.dart';
 import 'package:almas/ui_related/builders/bg_builder.dart';
 import 'package:almas/ui_related/buttons/floating_button.dart';
@@ -13,10 +13,9 @@ import 'package:almas/ui_related/header/header_option.dart';
 import 'package:almas/ui_related/header/mobile/header.dart';
 import 'package:almas/ui_related/popups/mobile/post_related/create_post_popup_mobile.dart';
 import 'package:almas/ui_related/tab/mobile/custom_tab_mobile.dart';
-import 'package:almas/views/posts/posts.dart';
+import 'package:almas/views/filtered_posts/filtered_posts_explore.dart';
 import 'package:flutter/material.dart';
-import 'package:psr_base/ui_related/builders/safe_state.dart';
-import 'package:psr_base/utils/popups/opening_popups.dart';
+import 'package:psr_base/index.dart';
 
 class HomeMobile extends StatefulWidget {
   const HomeMobile({Key? key}) : super(key: key);
@@ -94,11 +93,11 @@ class _State extends SafeState<HomeMobile> with TickerProviderStateMixin {
             controller: handler.controller,
             physics: const NeverScrollableScrollPhysics(),
             children: const [
-              MainPosts(type: PostsType.timeline),
-              MainPosts(type: PostsType.chosen),
-              MainPosts(type: PostsType.popular),
-              MainPosts(type: PostsType.trends),
-              MainPosts(type: PostsType.explore),
+              MainFilteredPosts(type: PostsType.timeline),
+              MainFilteredPosts(type: PostsType.chosen),
+              MainFilteredPosts(type: PostsType.popular),
+              MainFilteredPosts(type: PostsType.trends),
+              MainFilteredPosts(type: PostsType.explore),
             ],
           ),
         ),

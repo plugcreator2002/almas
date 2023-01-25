@@ -66,6 +66,10 @@ class MainButtonMobile extends StatelessWidget {
         size: iconSize ?? 15,
         color: _labelColor(isLoading),
       );
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 5),
+        child: child,
+      );
     }
     if (child != null) {
       return Padding(

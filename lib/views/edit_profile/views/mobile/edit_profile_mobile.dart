@@ -15,7 +15,6 @@ import 'package:provider/provider.dart';
 import 'package:psr_base/plugin_emulators/forms_builder/utils/form_builder_validators.dart';
 import 'package:psr_base/plugin_emulators/forms_builder/widgets/builders/form_builder.dart';
 import 'package:psr_base/ui_related/builders/safe_state.dart';
-import 'package:psr_base/utils/logger.dart';
 
 class EditProfileMobile extends StatefulWidget {
   const EditProfileMobile({Key? key}) : super(key: key);
@@ -65,15 +64,10 @@ class _State extends SafeState<EditProfileMobile> {
                 name: "username",
                 prefixIcon: Icons.email_outlined,
                 data: username,
+                maxLength: 29,
                 hintText: "username".tr,
-                validator: FormValidators.compose([
-                  FormValidators.required(context),
-                  CustomValidators.username(context),
-                ]),
-                onChanged: (content) {
-                  username = content;
-                  setState(() {});
-                },
+                validator: CustomValidators.username(context),
+                onChanged: (content) => username = content,
               ),
               const SizedBox(height: 10),
               InputCard(
@@ -109,7 +103,6 @@ class _State extends SafeState<EditProfileMobile> {
                         form["username"] = username.toLowerCase();
                       }
 
-                      logger(form);
                       presenter.updateProfile(
                         form: form,
                         callback: () => Navigator.pop(context),
