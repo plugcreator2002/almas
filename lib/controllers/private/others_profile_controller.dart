@@ -2,7 +2,6 @@
 import 'package:almas/config/languages/extension/tr.dart';
 import 'package:almas/models/public/enums.dart';
 import 'package:almas/providers/private/others_profile_presenter.dart';
-import 'package:almas/repositories/permissions/role_permissions.dart';
 import 'package:almas/repositories/repositories_handler.dart';
 
 class OthersProfileController extends OthersProfilePresenter {
@@ -14,7 +13,7 @@ class OthersProfileController extends OthersProfilePresenter {
 
     final conditions = [
       hasBeen,
-      RolePermissions.isAdmin(RepositoriesHandler.userData?.role)
+      RepositoriesHandler.userData?.isAdmin == true,
     ];
     if (conditions.contains(false)) {
       return false;
@@ -23,7 +22,7 @@ class OthersProfileController extends OthersProfilePresenter {
   }
 
   String get nameChangingRole {
-    if (RolePermissions.isSupervisor(user?.role)) {
+    if (user?.isSupervisor == true) {
       return "set-as-un-moderator".tr;
     } else if ([UserRole.user, UserRole.manager].contains(
       user?.role,
@@ -35,8 +34,8 @@ class OthersProfileController extends OthersProfilePresenter {
 
   bool get accessBanUser {
     final conditions = [
-      RolePermissions.isAdmin(RepositoriesHandler.userData?.role),
-      RolePermissions.isSupervisor(RepositoriesHandler.userData?.role),
+      RepositoriesHandler.userData?.isAdmin == true,
+      RepositoriesHandler.userData?.isSupervisor == true,
     ];
     return conditions.contains(true) && user?.isAdmin == false;
   }
@@ -51,7 +50,7 @@ class OthersProfileController extends OthersProfilePresenter {
   }
 
   bool get accessMenuOptions {
-    if (RolePermissions.isUser(RepositoriesHandler.userData?.role)) {
+    if (RepositoriesHandler.userData?.isUser == true) {
       return user?.role != UserRole.admin || user?.role != UserRole.manager;
     }
 

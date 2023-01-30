@@ -1,8 +1,8 @@
+import 'package:almas/data-server/server_interface/requests/posts/posts.dart';
 import 'package:almas/models/private/posts/models/post_model.dart';
 import 'package:almas/models/private/posts/posts_response.dart';
 import 'package:almas/models/public/pagination_related/pagination_parameters.dart';
 import 'package:almas/providers/config/parent_provider.dart';
-import 'package:almas/requests/posts/posts.dart';
 import 'package:flutter/scheduler.dart';
 
 class PrivatePostsPresenter extends ParentProvider {

@@ -51,6 +51,13 @@
             </list>
           </value>
         </entry>
+        <entry key="cafebazaar_flutter">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../../Config/flutter/.pub-cache/hosted/pub.flutter-io.cn/cafebazaar_flutter-1.0.2/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="characters">
           <value>
             <list>
@@ -944,6 +951,7 @@
       <root url="file://$PROJECT_DIR$/../../../../Config/flutter/.pub-cache/hosted/pub.flutter-io.cn/back_button_interceptor-6.0.2/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Config/flutter/.pub-cache/hosted/pub.flutter-io.cn/boolean_selector-2.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Config/flutter/.pub-cache/hosted/pub.flutter-io.cn/build-2.3.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../Config/flutter/.pub-cache/hosted/pub.flutter-io.cn/cafebazaar_flutter-1.0.2/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Config/flutter/.pub-cache/hosted/pub.flutter-io.cn/characters-1.2.1/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Config/flutter/.pub-cache/hosted/pub.flutter-io.cn/clock-1.1.1/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Config/flutter/.pub-cache/hosted/pub.flutter-io.cn/collection-1.16.0/lib" />

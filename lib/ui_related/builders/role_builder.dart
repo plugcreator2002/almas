@@ -1,6 +1,5 @@
 import 'package:almas/config/mine_images.dart';
 import 'package:almas/models/public/enums.dart';
-import 'package:almas/repositories/permissions/role_permissions.dart';
 import 'package:flutter/material.dart';
 
 class RoleBuilder extends StatelessWidget {
@@ -13,7 +12,7 @@ class RoleBuilder extends StatelessWidget {
 
   @override
   build(context) {
-    if (RolePermissions.isRed(accountRole)) {
+    if (accountRole == UserRole.red) {
       return Image.asset(
         MineImages.blueTick,
         width: 30,

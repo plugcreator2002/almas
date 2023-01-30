@@ -4,8 +4,9 @@ import 'package:almas/config/constants/loading_keys.dart';
 import 'package:almas/config/languages/extension/tr.dart';
 import 'package:almas/controllers/public/system_controller.dart';
 import 'package:almas/data-server/server_interface/models/server_params_data.dart';
+import 'package:almas/data-server/server_interface/requests/const.dart';
 import 'package:almas/data-server/server_interface/server_interface.dart';
-import 'package:almas/requests/const.dart';
+import 'package:almas/data-server/server_interface/requests/const.dart';
 import 'package:psr_base/utils/logger.dart';
 
 class AuthService {
@@ -88,7 +89,7 @@ class AuthService {
       ),
     );
 
-    logger("GET REFRESH TOKEN RESPONSE: ${response.toJson()}");
+    logger("GET REFRESH TOKEN RESPONSE: ${response.statusCode}");
     if (response.isSuccess) {
       return response.data;
     }

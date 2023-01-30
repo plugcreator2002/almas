@@ -1,5 +1,5 @@
+import 'package:almas/.env.dart';
 import 'package:almas/data-server/server_interface/server_interface.dart';
-import 'package:almas/repositories/repositories_config.dart';
 import 'package:flutter/material.dart';
 
 class ImageNetwork {
@@ -13,7 +13,7 @@ class ImageNetwork {
     Widget Function(BuildContext, Object, StackTrace?)? errorBuilder,
   }) {
     return Image.network(
-      "${RepositoriesConfig.bImageURL}$imageBase/$imageID",
+      "${ENV_CONFIG.IMAGE_BASE_URL}$imageBase/$imageID",
       fit: fit,
       errorBuilder: errorBuilder,
       scale: 1.0,

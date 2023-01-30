@@ -109,7 +109,7 @@ class SharedPreferencesPublic {
     return instance.getString(PreferencesConst.cookies);
   }
 
-  static Future<void> get removeCookies {
-    return instance.remove(PreferencesConst.cookies);
+  static Future<void> removeCookies() async {
+    await instance.remove(PreferencesConst.cookies);
   }
 }

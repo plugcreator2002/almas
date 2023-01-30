@@ -29,6 +29,8 @@ final faLang = {
   "back-login": "برگشت به صفحه ورود",
   "send-verification-link": "ارسال لینک تایید",
   "your-account-is-not-verified": "اکانت شما تایید نشده است",
+  "please-check-your-email-and-reset-your-password":
+      "لطفا ایمیل خود را بررسی کنید و رمز عبور خود را بازنشانی کنید",
 
   // profile
   "posts": "پست ها",

@@ -1,7 +1,7 @@
+import 'package:almas/data-server/server_interface/requests/account_score/account_score.dart';
 import 'package:almas/models/private/top_users/top_users_response.dart';
 import 'package:almas/models/public/pagination_related/pagination_parameters.dart';
 import 'package:almas/providers/config/parent_provider.dart';
-import 'package:almas/requests/account_score/account_score.dart';
 
 class TopUsersPresenter extends ParentProvider {
   TopUsersResponse topScoreWeekly = TopUsersResponse();

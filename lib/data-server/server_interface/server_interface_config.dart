@@ -19,7 +19,7 @@ class RequestInterfaceTools {
   void clearCookies() {
     if (header["Cookie"] != null) {
       header.remove("Cookie");
-      SharedPreferencesPublic.removeCookies;
+      SharedPreferencesPublic.removeCookies();
     }
   }
 
@@ -35,12 +35,17 @@ class RequestInterfaceTools {
   Future<ServerResponse> createResponse({
     required ServerInterfaceOptions options,
     required http.Response response,
+    required Future<ServerResponse> Function() reCall,
   }) async {
     if (response.statusCode == 401 && options.checkExpiredToken) {
       final result = await AuthController.refreshToken();
       if (result) {
-        return ServerResponse(statusCode: 401);
+        return await reCall();
       }
+    }
+
+    if (options.loading != null) {
+      closeLoading(options.loading, options.hasUpdateLoading);
     }
 
     final cookie = response.headers['set-cookie'];
@@ -99,7 +104,9 @@ class RequestInterfaceTools {
     }
 
     if (options.needToken != true) {
-      options.header.remove("Authorization");
+      final headerOptions = options.header;
+      headerOptions.remove("Authorization");
+      options.header = headerOptions;
     }
 
     return options;

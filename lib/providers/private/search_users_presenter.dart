@@ -1,6 +1,6 @@
+import 'package:almas/data-server/server_interface/requests/account/account.dart';
 import 'package:almas/models/private/user_model.dart';
 import 'package:almas/providers/config/parent_provider.dart';
-import 'package:almas/requests/account/account.dart';
 
 class SearchUsersPresenter extends ParentProvider {
   List<UserModel> users = [];

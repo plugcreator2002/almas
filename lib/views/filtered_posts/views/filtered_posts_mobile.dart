@@ -34,6 +34,12 @@ class FilteredPostsMobile extends StatelessWidget {
           FilteredPostsController.instance.get(type, pagination);
         },
         itemBuilder: (context, index) {
+          if ([
+            presenter.response.data == null,
+            presenter.response.data?.isEmpty == true,
+          ].contains(true)) {
+            return const SizedBox();
+          }
           final element = (presenter.response.data ?? [])[index];
 
           return PostCardMobile(

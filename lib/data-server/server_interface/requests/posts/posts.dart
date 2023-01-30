@@ -6,7 +6,7 @@ import 'package:almas/data-server/server_interface/server_interface.dart';
 import 'package:almas/models/private/posts/models/post_model.dart';
 import 'package:almas/models/public/enums.dart' show PostsType;
 import 'package:almas/models/public/pagination_related/pagination_parameters.dart';
-import 'package:almas/requests/const.dart';
+import 'package:almas/data-server/server_interface/requests/const.dart';
 import 'package:psr_base/utils/logger.dart';
 
 class PostsService {
@@ -24,19 +24,14 @@ class PostsService {
       ),
     );
 
-    if (response.statusCode == 401) {
-      return "Need-Token";
-    }
-
-    final conditions = [
+    if ([
       response.isSuccess && response.data != null,
       response.data["filteredPosts"] != null,
       response.data["filteredPosts"] is List,
-    ];
-    if (conditions[0] && conditions[1] && conditions[2]) {
-      return response.data;
+    ].contains(false)) {
+      return null;
     }
-    return null;
+    return response.data;
   }
 
   static Future<PostModel?> findPostById(num id) async {

@@ -11,7 +11,7 @@ import 'package:share_plus/share_plus.dart';
 
 class ServerInterface extends RequestInterfaceTools {
   static ServerInterface instance = ServerInterface();
-  bool loggerEnabled = false;
+  bool loggerEnabled = true;
 
   Future<ServerResponse> get({
     required String path,
@@ -20,6 +20,7 @@ class ServerInterface extends RequestInterfaceTools {
     final options = configOptions(interfaceOptions);
 
     String params = "";
+    String url = path;
 
     if (options.data.isNotEmpty) {
       options.data.forEach((key, value) {
@@ -32,22 +33,22 @@ class ServerInterface extends RequestInterfaceTools {
       }
     }
 
-    path += params;
+    url += params;
 
     try {
-      logger("Cookies: ${instance.header["Cookie"]}", loggerEnabled);
+      logger("url: $url", loggerEnabled);
       final response = await http.get(
-        Uri.parse(path),
+        Uri.parse(url),
         headers: instance.header,
       );
-
-      if (options.loading != null) {
-        closeLoading(options.loading, options.hasUpdateLoading);
-      }
 
       return createResponse(
         options: options,
         response: response,
+        reCall: () async => await get(
+          path: path,
+          interfaceOptions: interfaceOptions,
+        ),
       );
     } catch (error) {
       if (options.loading != null) {
@@ -64,20 +65,20 @@ class ServerInterface extends RequestInterfaceTools {
     final options = configOptions(interfaceOptions);
 
     try {
-      logger("Cookies: ${instance.header["Cookie"]}", loggerEnabled);
+      logger("url: $path", loggerEnabled);
       final response = await http.post(
         Uri.parse(path),
         body: json.encode(options.data),
         headers: instance.header,
       );
 
-      if (options.loading != null) {
-        closeLoading(options.loading, options.hasUpdateLoading);
-      }
-
       return createResponse(
         options: options,
         response: response,
+        reCall: () async => await post(
+          path: path,
+          interfaceOptions: interfaceOptions,
+        ),
       );
     } catch (error) {
       if (options.loading != null) {
@@ -94,20 +95,20 @@ class ServerInterface extends RequestInterfaceTools {
     final options = configOptions(interfaceOptions);
 
     try {
-      logger("Cookies: ${instance.header["Cookie"]}", loggerEnabled);
+      logger("url: $path", loggerEnabled);
       final response = await http.put(
         Uri.parse(path),
         body: json.encode(options.data),
         headers: instance.header,
       );
 
-      if (options.loading != null) {
-        closeLoading(options.loading, options.hasUpdateLoading);
-      }
-
       return createResponse(
         options: options,
         response: response,
+        reCall: () async => await put(
+          path: path,
+          interfaceOptions: interfaceOptions,
+        ),
       );
     } catch (error) {
       if (options.loading != null) {
@@ -124,20 +125,20 @@ class ServerInterface extends RequestInterfaceTools {
     final options = configOptions(interfaceOptions);
 
     try {
-      logger("Cookies: ${instance.header["Cookie"]}", loggerEnabled);
+      logger("url: $path", loggerEnabled);
       final response = await http.patch(
         Uri.parse(path),
         body: json.encode(options.data),
         headers: instance.header,
       );
 
-      if (options.loading != null) {
-        closeLoading(options.loading, options.hasUpdateLoading);
-      }
-
       return createResponse(
         options: options,
         response: response,
+        reCall: () async => await patch(
+          path: path,
+          interfaceOptions: interfaceOptions,
+        ),
       );
     } catch (error) {
       if (options.loading != null) {
@@ -154,20 +155,20 @@ class ServerInterface extends RequestInterfaceTools {
     final options = configOptions(interfaceOptions);
 
     try {
-      logger("Cookies: ${instance.header["Cookie"]}", loggerEnabled);
+      logger("url: $path", loggerEnabled);
       final response = await http.delete(
         Uri.parse(path),
         body: json.encode(options.data),
         headers: instance.header,
       );
 
-      if (options.loading != null) {
-        closeLoading(options.loading, options.hasUpdateLoading);
-      }
-
       return createResponse(
         options: options,
         response: response,
+        reCall: () async => await delete(
+          path: path,
+          interfaceOptions: interfaceOptions,
+        ),
       );
     } catch (error) {
       if (options.loading != null) {
@@ -202,6 +203,7 @@ class ServerInterface extends RequestInterfaceTools {
         filename: basename(file.path),
       );
 
+      logger("url: $path", loggerEnabled);
       multipartRequest.files.add(multipartFile);
       final send = await multipartRequest.send();
 
@@ -213,6 +215,12 @@ class ServerInterface extends RequestInterfaceTools {
       return createResponse(
         options: options,
         response: response,
+        reCall: () async => await upload(
+          path,
+          file: file,
+          field: field,
+          interfaceOptions: interfaceOptions,
+        ),
       );
     } catch (error) {
       if (options.loading != null) {

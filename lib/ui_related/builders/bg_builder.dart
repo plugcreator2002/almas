@@ -18,7 +18,7 @@ class BackgroundBuilder extends StatelessWidget {
       RepositoriesHandler.theme?.isFree == false,
       SystemHandler.theme.name == ThemesConst.dark,
     ];
-    logger(SystemHandler.theme.name);
+    // logger(SystemHandler.theme.name);
     if ((conditions[0] && conditions[1]) || conditions[2]) {
       final width = MediaQuery.of(context).size.width;
 

@@ -1,42 +1,9 @@
+import 'package:almas/data-server/server_interface/requests/settings/settings.dart';
 import 'package:almas/models/private/settings/fonts/setting_fonts_response.dart';
 import 'package:almas/models/private/settings/setting_product_model.dart';
 import 'package:almas/models/private/settings/themes/setting_themes_response.dart';
 import 'package:almas/providers/config/parent_provider.dart';
 import 'package:almas/repositories/repositories_handler.dart';
-import 'package:almas/requests/settings/settings.dart';
-
-final freeThemes = [
-  SettingProductModel(
-    id: 1111,
-    price: 0,
-    type: "theme",
-    name: "light",
-  ),
-  SettingProductModel(
-    id: 6533,
-    price: 0,
-    type: "theme",
-    name: "dark",
-  ),
-  SettingProductModel(
-    id: 2222,
-    price: 0,
-    type: "theme",
-    name: "red",
-  ),
-  SettingProductModel(
-    id: 3333,
-    price: 0,
-    type: "theme",
-    name: "orange",
-  ),
-  SettingProductModel(
-    id: 4444,
-    price: 0,
-    type: "theme",
-    name: "green",
-  ),
-];
 
 class SettingsPresenter extends ParentProvider {
   String? tickID;

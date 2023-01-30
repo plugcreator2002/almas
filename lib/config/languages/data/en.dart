@@ -24,6 +24,8 @@ final enLang = {
   "back-login": "Back Login",
   "send-verification-link": "Send verification link",
   "your-account-is-not-verified": "Your account is not verified",
+  "please-check-your-email-and-reset-your-password":
+      "Please check your email and reset your password",
 
   // profile
   "posts": "Posts",

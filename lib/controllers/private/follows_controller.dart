@@ -1,9 +1,9 @@
 import 'package:almas/config/constants/listening_keys.dart';
 import 'package:almas/controllers/public/listening_controller.dart';
+import 'package:almas/data-server/server_interface/requests/account/account.dart';
 import 'package:almas/models/private/accounts/accounts_response.dart';
 import 'package:almas/models/private/user_model.dart';
 import 'package:almas/models/public/pagination_related/pagination_parameters.dart';
-import 'package:almas/requests/account/account.dart';
 
 class FollowsPresenter extends Listening {
   AccountsResponse followers = AccountsResponse();

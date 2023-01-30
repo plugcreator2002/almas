@@ -1,6 +1,6 @@
+import 'package:almas/data-server/server_interface/requests/comments/comments.dart';
 import 'package:almas/models/private/comments/comments_response.dart';
 import 'package:almas/models/private/comments/models/comment_model.dart';
-import 'package:almas/requests/comments/comments.dart';
 
 class CommentsController {
   static Future<void> getReplays({

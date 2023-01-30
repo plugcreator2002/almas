@@ -2,11 +2,10 @@ import 'dart:ui' show VoidCallback;
 
 import 'package:almas/controllers/public/listening_controller.dart';
 import 'package:almas/controllers/public/notifications/messaging_eventings.dart';
+import 'package:almas/data-server/server_interface/requests/account/account.dart';
+import 'package:almas/data-server/server_interface/requests/posts/posts.dart';
 import 'package:almas/models/private/user_model.dart';
 import 'package:almas/models/public/enums.dart';
-import 'package:almas/repositories/permissions/role_permissions.dart';
-import 'package:almas/requests/account/account.dart';
-import 'package:almas/requests/posts/posts.dart';
 import 'package:flutter/material.dart';
 
 const mainListening = "main-listening";
@@ -82,7 +81,7 @@ class OthersProfilePresenter extends Listening {
   void changeRole() async {
     if (user?.id != null) {
       UserRole? role;
-      if (RolePermissions.isSupervisor(user?.role)) {
+      if (user?.isSupervisor == true) {
         role = UserRole.user;
       } else if ([UserRole.user, UserRole.manager].contains(
         user?.role,

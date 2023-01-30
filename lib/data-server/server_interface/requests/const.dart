@@ -1,7 +1,7 @@
-import 'package:almas/repositories/repositories_config.dart';
+import 'package:almas/.env.dart';
 
 class RoutesAPI {
-  static const baseURL = RepositoriesConfig.baseURL;
+  static const baseURL = ENV_CONFIG.API_BASE_URL;
 
   /// auth
   static const authLogin = '${baseURL}auth/login';

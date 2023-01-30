@@ -1,10 +1,9 @@
 import 'package:almas/config/routes/const.dart';
+import 'package:almas/data-server/server_interface/requests/account/account.dart';
+import 'package:almas/data-server/server_interface/requests/posts/posts.dart';
 import 'package:almas/data-server/socket_io/models/enums.dart';
 import 'package:almas/repositories/repositories_handler.dart';
-import 'package:almas/requests/account/account.dart';
-import 'package:almas/requests/posts/posts.dart';
 import 'package:flutter/material.dart';
-import 'package:psr_base/utils/logger.dart';
 
 class OnReceivedMessageHandling {
   static OnReceivedMessageHandling instance = OnReceivedMessageHandling();
@@ -40,11 +39,8 @@ class OnReceivedMessageHandling {
   }
 
   Future<void> _receivedCommentHandle(num? postID) async {
-    logger("+++++++++++++++++++++");
     if (postID != null) {
-      logger("HAS BEEN POST ID");
       PostsService.findPostById(postID).then((result) {
-        logger(result?.toJson());
         if (result != null) {
           Navigator.pushNamed(
             RepositoriesHandler.context,

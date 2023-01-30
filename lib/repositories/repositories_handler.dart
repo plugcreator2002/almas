@@ -40,8 +40,8 @@ class RepositoriesHandler {
     }
   }
 
-  static void saveToken(token) {
-    SharedPreferencesPublic.saveToken(token);
+  static Future<void> saveToken(token) async {
+    await SharedPreferencesPublic.saveToken(token);
   }
 
   static String? get authToken => SharedPreferencesPublic.authToken;

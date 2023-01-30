@@ -1,12 +1,12 @@
 import 'dart:ui';
 
+import 'package:almas/data-server/server_interface/requests/account/account.dart';
+import 'package:almas/data-server/server_interface/requests/posts/posts.dart';
 import 'package:almas/models/private/blocks/blocked_response.dart';
 import 'package:almas/models/private/user_model.dart';
 import 'package:almas/models/public/pagination_related/pagination_parameters.dart';
 import 'package:almas/providers/config/parent_provider.dart';
 import 'package:almas/repositories/repositories_handler.dart';
-import 'package:almas/requests/account/account.dart';
-import 'package:almas/requests/posts/posts.dart';
 import 'package:psr_base/packages.dart';
 
 class AccountPresenter extends ParentProvider<UserModel> {
@@ -20,9 +20,12 @@ class AccountPresenter extends ParentProvider<UserModel> {
     void Function(UserModel? model)? callback,
     VoidCallback? authInvalid,
     bool update = false,
+    bool moreDetails = true,
   }) async {
     final result = await AccountService.findMe();
-    getCounts();
+    if (moreDetails) {
+      getCounts();
+    }
 
     if (result != null) {
       profile = result;

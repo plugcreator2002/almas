@@ -21,12 +21,13 @@ class SplashController {
       RepositoriesHandler.getTheme();
 
       await context.read<AccountPresenter>().getProfile(
-        callback: (model) async {
-          RepositoriesHandler.initConfig(model: model);
-          MessagingController.openRoom(model?.id);
-          // MessagingController.getCount(context);
-        },
-      );
+            moreDetails: false,
+            callback: (model) async {
+              RepositoriesHandler.initConfig(model: model);
+              MessagingController.openRoom(model?.id);
+              // MessagingController.getCount(context);
+            },
+          );
       callback(route);
     } else {
       callback(route);

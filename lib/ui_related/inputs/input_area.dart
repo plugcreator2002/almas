@@ -1,4 +1,5 @@
 import 'package:almas/controllers/public/system_controller.dart';
+import 'package:almas/utils/extensions/string_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:psr_base/plugin_emulators/forms_builder/widgets/usase_fields/custom_field.dart';
@@ -63,6 +64,9 @@ class InputArea extends StatefulWidget {
 
 class _InputAreaState extends SafeState<InputArea> {
   final controller = TextEditingController();
+  final _direction = ValueNotifier(
+    TextDirection.ltr,
+  );
 
   Widget? _suffix(ThemeData theme) {
     if (widget.suffixIcon != null) {
@@ -166,31 +170,42 @@ class _InputAreaState extends SafeState<InputArea> {
                 color: widget.bgColor,
                 borderRadius: BorderRadius.circular(4),
               ),
-              child: TextFormField(
-                onFieldSubmitted: (content) {
-                  if (widget.textInputAction == TextInputAction.next) {
-                    node.requestFocus();
-                  }
-                  if (widget.onFieldSubmitted != null) {
-                    widget.onFieldSubmitted!(content);
-                  }
-                },
-                minLines: widget.minLines,
-                initialValue: state.value,
-                maxLines: widget.maxLines,
-                keyboardType: widget.keyboardType,
-                textInputAction: widget.textInputAction,
-                maxLength: widget.maxLength,
-                decoration: state.decoration,
-                inputFormatters: widget.inputFormatters,
-                onChanged: (data) => state.didChange(data),
-                textAlignVertical: TextAlignVertical.center,
-                style: TextStyle(
-                  fontFamily: SystemHandler.family,
-                  fontSize: 15,
-                  color: SystemHandler.theme.upsideSystem,
-                ),
-              ),
+              child: ValueListenableBuilder<TextDirection>(
+                  valueListenable: _direction,
+                  builder: (context, value, child) {
+                    return TextFormField(
+                      onFieldSubmitted: (content) {
+                        if (widget.textInputAction == TextInputAction.next) {
+                          node.requestFocus();
+                        }
+                        if (widget.onFieldSubmitted != null) {
+                          widget.onFieldSubmitted!(content);
+                        }
+                      },
+                      minLines: widget.minLines,
+                      initialValue: state.value,
+                      maxLines: widget.maxLines,
+                      keyboardType: widget.keyboardType,
+                      textInputAction: widget.textInputAction,
+                      maxLength: widget.maxLength,
+                      decoration: state.decoration,
+                      inputFormatters: widget.inputFormatters,
+                      textDirection: value,
+                      onChanged: (data) {
+                        state.didChange(data);
+                        if (data.trim().length < 2) {
+                          final direction = data.getDirection;
+                          if (direction != value) _direction.value = direction;
+                        }
+                      },
+                      textAlignVertical: TextAlignVertical.center,
+                      style: TextStyle(
+                        fontFamily: SystemHandler.family,
+                        fontSize: 15,
+                        color: SystemHandler.theme.upsideSystem,
+                      ),
+                    );
+                  }),
             ),
           ),
         );

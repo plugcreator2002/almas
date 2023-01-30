@@ -2,7 +2,7 @@ import 'package:almas/config/constants/loading_keys.dart';
 import 'package:almas/data-server/server_interface/models/server_params_data.dart';
 import 'package:almas/data-server/server_interface/server_interface.dart';
 import 'package:almas/models/public/pagination_related/pagination_parameters.dart';
-import 'package:almas/requests/const.dart';
+import 'package:almas/data-server/server_interface/requests/const.dart';
 
 class AccountScoreService {
   static Future<dynamic> accountTopScore([

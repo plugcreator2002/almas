@@ -1,5 +1,5 @@
+import 'package:almas/.env.dart';
 import 'package:almas/repositories/permissions/loggedin_permissions.dart';
-import 'package:almas/repositories/repositories_config.dart';
 import 'package:almas/repositories/repositories_handler.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -17,7 +17,7 @@ class MenuController {
   static void openTelegram() {
     LoggedInPermissions.checkHasToken(() {
       RepositoriesHandler.launchURL(
-        Uri.parse("https://${RepositoriesConfig.telegramURL}"),
+        Uri.parse("https://${ENV_CONFIG.TELEGRAM_URL}"),
         mode: LaunchMode.externalApplication,
       );
     });
@@ -26,7 +26,7 @@ class MenuController {
   static void openInstagram() {
     LoggedInPermissions.checkHasToken(() {
       RepositoriesHandler.launchURL(
-        Uri.parse(RepositoriesConfig.instagramURL),
+        Uri.parse(ENV_CONFIG.INSTAGRAM_URL),
         mode: LaunchMode.externalApplication,
       );
     });
@@ -35,7 +35,7 @@ class MenuController {
   static void support() {
     LoggedInPermissions.checkHasToken(() {
       RepositoriesHandler.launchURL(
-        Uri.parse("mailto:${RepositoriesConfig.supportEmail}"),
+        Uri.parse("mailto:${ENV_CONFIG.SUPPORT_EMAIL}"),
         mode: LaunchMode.externalApplication,
       );
     });

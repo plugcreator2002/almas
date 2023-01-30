@@ -1,7 +1,7 @@
 import 'package:almas/config/constants/loading_keys.dart';
 import 'package:almas/config/languages/extension/tr.dart';
 import 'package:almas/config/mine_images.dart';
-import 'package:almas/requests/account/account.dart';
+import 'package:almas/data-server/server_interface/requests/account/account.dart';
 import 'package:almas/ui_related/animations/rotation_builder.dart';
 import 'package:almas/ui_related/buttons/main_button_mobile.dart';
 import 'package:almas/ui_related/inputs/input_card.dart';

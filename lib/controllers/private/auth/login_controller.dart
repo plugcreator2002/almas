@@ -1,7 +1,7 @@
 import 'dart:ui' show VoidCallback;
 
+import 'package:almas/data-server/server_interface/requests/auth/auth.dart';
 import 'package:almas/repositories/repositories_handler.dart';
-import 'package:almas/requests/auth/auth.dart';
 import 'package:flutter/material.dart' show GlobalKey;
 import 'package:psr_base/plugin_emulators/forms_builder/widgets/builders/form_builder.dart';
 

@@ -5,7 +5,7 @@ import 'package:almas/data-server/server_interface/models/server_params_data.dar
 import 'package:almas/data-server/server_interface/server_interface.dart';
 import 'package:almas/models/private/comments/models/comment_model.dart';
 import 'package:almas/models/public/pagination_related/pagination_parameters.dart';
-import 'package:almas/requests/const.dart';
+import 'package:almas/data-server/server_interface/requests/const.dart';
 
 class CommentsService {
   static Future<dynamic> getComments(

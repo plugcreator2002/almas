@@ -1,6 +1,6 @@
 import 'package:almas/config/languages/extension/tr.dart';
 import 'package:almas/controllers/public/system_controller.dart';
-import 'package:almas/requests/auth/auth.dart';
+import 'package:almas/data-server/server_interface/requests/auth/auth.dart';
 import 'package:almas/ui_related/buttons/main_button_mobile.dart';
 import 'package:flutter/material.dart';
 

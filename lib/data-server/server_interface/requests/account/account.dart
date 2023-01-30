@@ -1,10 +1,11 @@
 import 'package:almas/config/constants/loading_keys.dart';
+import 'package:almas/config/languages/extension/tr.dart';
 import 'package:almas/data-server/server_interface/models/server_params_data.dart';
 import 'package:almas/data-server/server_interface/models/server_response.dart';
+import 'package:almas/data-server/server_interface/requests/const.dart';
 import 'package:almas/data-server/server_interface/server_interface.dart';
 import 'package:almas/models/private/user_model.dart';
 import 'package:almas/models/public/pagination_related/pagination_parameters.dart';
-import 'package:almas/requests/const.dart';
 import 'package:psr_base/utils/logger.dart';
 import 'package:share_plus/share_plus.dart' show XFile;
 
@@ -77,6 +78,7 @@ class AccountService {
         loading: LoadingKeys.forgotPassword,
         checkExpiredToken: false,
         successfulToast: true,
+        messageToast: "please-check-your-email-and-reset-your-password".tr,
         data: {"email": email},
       ),
     );

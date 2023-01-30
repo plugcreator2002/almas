@@ -1,9 +1,9 @@
 import 'dart:developer';
 
+import 'package:almas/.env.dart';
 import 'package:almas/data-server/socket_io/const.dart';
 import 'package:almas/data-server/socket_io/models/socket_response.dart';
 import 'package:almas/data-server/socket_io/socket_handler.dart';
-import 'package:almas/repositories/repositories_config.dart';
 import 'package:almas/repositories/repositories_handler.dart';
 import 'package:psr_base/utils/logger.dart';
 import 'package:socket_io_client/socket_io_client.dart' as client;
@@ -24,7 +24,7 @@ class SocketIOServices {
         return;
       }
       socket = client.io(
-        RepositoriesConfig.socketIOURL,
+        ENV_CONFIG.SOCKET_IO_URL,
         client.OptionBuilder().setTransports([
           "websocket",
         ]).build(),

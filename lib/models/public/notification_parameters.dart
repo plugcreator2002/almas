@@ -1,7 +1,7 @@
 import 'package:almas/models/public/enums.dart';
 import 'package:almas/repositories/repositories_handler.dart';
 import 'package:almas/utils/extensions/enum_extension.dart';
-import 'package:almas/utils/extensions/string_securing_extension.dart';
+import 'package:almas/utils/extensions/string_extension.dart';
 
 class MessageParameters {
   final num? roomID;
