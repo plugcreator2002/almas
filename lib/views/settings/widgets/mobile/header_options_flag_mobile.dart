@@ -1,5 +1,5 @@
 import 'package:almas/controllers/public/system_controller.dart';
-import 'package:almas/ui_related/custom_title.dart';
+import 'package:almas/ui_related/titles/custom_title.dart';
 import 'package:flutter/material.dart';
 
 class HeaderOptionsFlagMobile extends StatelessWidget {

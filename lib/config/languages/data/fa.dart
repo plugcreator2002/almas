@@ -1,9 +1,11 @@
 import 'package:almas/config/languages/data/longs/fa/guide_fa.dart';
+import 'package:almas/config/languages/data/longs/fa/privacy_policy_fa.dart';
 import 'package:almas/config/languages/data/longs/fa/rules_fa.dart';
 
 final faLang = {
   ...rulesFaLang,
   ...guideFaLang,
+  ...privacyPolicyFaLang,
   "almas-application": "اپلیکیشن الماس",
   "close": "بستن",
   "email": "ایمیل",
@@ -31,6 +33,13 @@ final faLang = {
   "your-account-is-not-verified": "اکانت شما تایید نشده است",
   "please-check-your-email-and-reset-your-password":
       "لطفا ایمیل خود را بررسی کنید و رمز عبور خود را بازنشانی کنید",
+
+  "terms-of-service": "شرایط استفاده از خدمات",
+  "and": "و",
+  "privacy": "حریم خصوصی",
+  "we-accept": "را می پذیریم",
+  "privacy-policy": "سیاست حفظ حریم خصوصی",
+  "please-accept-the-terms...": "لطفا شرایط مرتبط با حریم خصوصی را بپذیرید",
 
   // profile
   "posts": "پست ها",

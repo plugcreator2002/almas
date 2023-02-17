@@ -8,19 +8,36 @@ class CBServicePlugin {
   static CBServicePlugin instance = CBServicePlugin.init();
 
   CBServicePlugin.init() {
-    logger("Initialized CafeBazaarFlutter Plugin");
-    cb = CafebazaarFlutter.instance.inAppPurchase(
-      ENV_CONFIG.CAFE_BAZAAR_PUBLIC_KEY,
-    );
+    if (ENV_CONFIG.IS_CAFE_BAZAAR_VERSION) {
+      logger("Initialized CafeBazaarFlutter Plugin");
+      cb = CafebazaarFlutter.instance.inAppPurchase(
+        ENV_CONFIG.CAFE_BAZAAR_PUBLIC_KEY,
+      );
+    }
   }
 
-  Future<void> purchase(num id) async {
-    final result = await cb.purchase(
-      id.toString(),
-      payLoad: "Your payload",
-    );
-    if (result != null) {
-      logger('success: ${result.productId}');
+  Future<PurchaseInfo?> purchase(dynamic id) async {
+    try {
+      final result = await cb.purchase(
+        id.toString(),
+        payLoad: "Your payload",
+      );
+      logger('Result.Transaction ${result?.toMap()}');
+      return result;
+    } catch (e) {
+      logger(e.toString());
     }
+    return null;
+  }
+
+  Future<bool?> consume(dynamic id) async {
+    try {
+      final result = await cb.consume("6277939875");
+      logger('Result.Consume $result');
+      return result;
+    } catch (e) {
+      logger(e.toString());
+    }
+    return null;
   }
 }

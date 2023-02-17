@@ -1,10 +1,8 @@
-import 'package:almas/config/themes/const.dart';
 import 'package:almas/controllers/public/system_controller.dart';
 import 'package:almas/repositories/repositories_config.dart';
 import 'package:almas/repositories/repositories_handler.dart';
 import 'package:almas/utils/image_network.dart';
 import 'package:flutter/material.dart';
-import 'package:psr_base/utils/logger.dart';
 
 class BackgroundBuilder extends StatelessWidget {
   final Widget child;
@@ -15,11 +13,9 @@ class BackgroundBuilder extends StatelessWidget {
   build(context) {
     final conditions = [
       SystemHandler.theme.name.isNotEmpty,
-      RepositoriesHandler.theme?.isFree == false,
-      SystemHandler.theme.name == ThemesConst.dark,
+      RepositoriesHandler.theme?.isBackground == true,
     ];
-    // logger(SystemHandler.theme.name);
-    if ((conditions[0] && conditions[1]) || conditions[2]) {
+    if (conditions[0] && conditions[1]) {
       final width = MediaQuery.of(context).size.width;
 
       return Stack(

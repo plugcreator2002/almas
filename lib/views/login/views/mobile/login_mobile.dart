@@ -1,13 +1,16 @@
 import 'package:almas/config/constants/loading_keys.dart';
 import 'package:almas/config/languages/extension/tr.dart';
+import 'package:almas/config/mine_colors.dart';
 import 'package:almas/config/mine_images.dart';
 import 'package:almas/config/routes/const.dart';
 import 'package:almas/controllers/private/auth/login_controller.dart';
 import 'package:almas/controllers/public/system_controller.dart';
+import 'package:almas/models/public/title_span_config.dart';
 import 'package:almas/ui_related/animations/rotation_builder.dart';
 import 'package:almas/ui_related/buttons/main_button_mobile.dart';
-import 'package:almas/ui_related/custom_title.dart';
 import 'package:almas/ui_related/inputs/input_card.dart';
+import 'package:almas/ui_related/titles/custom_title.dart';
+import 'package:almas/ui_related/titles/title_span.dart';
 import 'package:flutter/material.dart';
 import 'package:psr_base/index.dart';
 
@@ -83,6 +86,42 @@ class _LoginMobileState extends SafeState<LoginMobile> {
                   RouteTags.splash,
                 );
               }),
+            ),
+            Row(
+              children: [
+                Checkbox(
+                  value: controller.acceptPrivacyPolicy,
+                  onChanged: (value) {
+                    setState(() {
+                      controller.acceptPrivacyPolicy = value ?? false;
+                    });
+                  },
+                ),
+                TitleSpan(spans: [
+                  TitleSpanConfig(
+                    text: "${"terms-of-service".tr} ",
+                    color: MineColors.lightInfo,
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      RouteTags.privacyPolicy,
+                    ),
+                  ),
+                  TitleSpanConfig(
+                    text: "${"and".tr} ",
+                  ),
+                  TitleSpanConfig(
+                    text: "${"privacy".tr} ",
+                    color: MineColors.lightInfo,
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      RouteTags.privacyPolicy,
+                    ),
+                  ),
+                  TitleSpanConfig(
+                    text: "we-accept".tr,
+                  ),
+                ]),
+              ],
             ),
             const SizedBox(height: 25),
             CustomTitle(

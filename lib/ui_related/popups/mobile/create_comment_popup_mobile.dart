@@ -4,9 +4,9 @@ import 'package:almas/controllers/public/system_controller.dart';
 import 'package:almas/models/private/comments/models/comment_model.dart';
 import 'package:almas/providers/private/comments_presenter.dart';
 import 'package:almas/ui_related/buttons/main_button_mobile.dart';
-import 'package:almas/ui_related/custom_title.dart';
 import 'package:almas/ui_related/inputs/input_area.dart';
 import 'package:almas/ui_related/minors/line.dart';
+import 'package:almas/ui_related/titles/custom_title.dart';
 import 'package:flutter/material.dart';
 import 'package:psr_base/ui_related/builders/safe_state.dart';
 

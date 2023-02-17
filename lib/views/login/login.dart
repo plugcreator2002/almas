@@ -21,20 +21,6 @@ class MainLogin extends StatelessWidget {
     ].contains(true);
   }
 
-  OptionsPressed? leading(BuildContext context) {
-    return OptionsPressed(
-      icon: Icons.arrow_back_rounded,
-      onPressed: () {
-        if (accessGoHome) {
-          Navigator.pushReplacementNamed(
-            context,
-            RouteTags.home,
-          );
-        }
-      },
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -53,7 +39,17 @@ class MainLogin extends StatelessWidget {
           notification: false,
           options: HeaderOptions(
             title: "login".tr,
-            leading: leading(context),
+            leading: OptionsPressed(
+              icon: Icons.arrow_back_rounded,
+              onPressed: () {
+                if (accessGoHome) {
+                  Navigator.pushReplacementNamed(
+                    context,
+                    RouteTags.home,
+                  );
+                }
+              },
+            ),
           ),
         ),
         body: const BaseWidgets(

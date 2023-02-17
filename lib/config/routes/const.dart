@@ -25,4 +25,6 @@ class RouteTags {
 
   static const editProfile = '/edit-profile';
   static const editPassword = '/edit-password';
+
+  static const privacyPolicy = '/privacy-policy';
 }

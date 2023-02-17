@@ -1,9 +1,12 @@
-import 'package:almas/data-server/server_interface/requests/settings/settings.dart';
+import 'package:almas/.env.dart';
+import 'package:almas/data-server/server_interface/requests/product/product.dart';
 import 'package:almas/models/private/settings/fonts/setting_fonts_response.dart';
 import 'package:almas/models/private/settings/setting_product_model.dart';
 import 'package:almas/models/private/settings/themes/setting_themes_response.dart';
 import 'package:almas/providers/config/parent_provider.dart';
 import 'package:almas/repositories/repositories_handler.dart';
+import 'package:almas/service_plugins/transaction.dart';
+import 'package:psr_base/utils/logger.dart';
 
 class SettingsPresenter extends ParentProvider {
   String? tickID;
@@ -14,7 +17,7 @@ class SettingsPresenter extends ParentProvider {
   SettingThemesResponse themes = SettingThemesResponse();
 
   Future<void> getFonts() async {
-    final response = await SettingsService.fonts();
+    final response = await ProductService.getFonts();
 
     if (response != null) {
       final result = SettingFontsResponse.fromJson(
@@ -31,13 +34,14 @@ class SettingsPresenter extends ParentProvider {
   }
 
   Future<void> getThemes() async {
-    final response = await SettingsService.themes();
+    final response = await ProductService.getThemes();
 
     if (response != null) {
       final result = SettingThemesResponse.fromJson(
         json: response,
         data: themes.data,
       );
+      logger(result.data);
 
       themes = result;
       notifyListeners();
@@ -75,6 +79,18 @@ class SettingsPresenter extends ParentProvider {
       );
     }
     return conditions.contains(true);
+  }
+
+  void payment(SettingProductModel model) {
+    dynamic productId;
+    if (ENV_CONFIG.IS_CAFE_BAZAAR_VERSION) {
+      productId = "${model.name}-${model.id}";
+    } else {
+      productId = model.id;
+    }
+    if (model.id != null) {
+      TransactionService.purchase(productId);
+    }
   }
 
   @override

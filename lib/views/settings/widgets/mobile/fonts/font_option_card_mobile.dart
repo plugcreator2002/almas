@@ -1,9 +1,11 @@
 import 'package:almas/config/languages/extension/tr.dart';
 import 'package:almas/controllers/public/system_controller.dart';
 import 'package:almas/models/private/settings/setting_product_model.dart';
+import 'package:almas/providers/private/settings_presenter.dart';
 import 'package:almas/ui_related/buttons/fade_button.dart';
 import 'package:almas/ui_related/buttons/main_button_mobile.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class FontOptionCardMobile extends StatelessWidget {
   final num? id;
@@ -65,11 +67,14 @@ class FontOptionCardMobile extends StatelessWidget {
               ),
             ),
           ),
-          if (!model.isFree) ...[
+          if (model.nonFree) ...[
             MainButtonMobile(
               height: 35,
               label: 'online-payment'.tr,
               bgColor: SystemHandler.theme.info,
+              onTap: () {
+                // context.read<SettingsPresenter>().payment(model);
+              },
             ),
           ],
         ],

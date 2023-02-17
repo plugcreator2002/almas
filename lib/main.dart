@@ -4,7 +4,6 @@ import 'package:almas/config/routes/route_generator.dart';
 import 'package:almas/providers/main.dart';
 import 'package:almas/providers/public/main_presenter.dart';
 import 'package:almas/repositories/repositories_handler.dart';
-import 'package:almas/service_plugins/cb.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show SystemChrome, DeviceOrientation;
 import 'package:loader_overlay/loader_overlay.dart';
@@ -13,7 +12,6 @@ import 'package:psr_base/ui_related/builders/safe_state.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  CBServicePlugin.init();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,

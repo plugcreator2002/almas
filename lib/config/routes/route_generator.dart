@@ -6,15 +6,9 @@ import 'package:almas/views/blocks/blocks.dart';
 import 'package:almas/views/index.dart';
 import 'package:flutter/material.dart' show Route, RouteSettings, SizedBox;
 
-String inRoute = RouteTags.splash;
-
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     final arguments = settings.arguments;
-
-    if (settings.name != null) {
-      inRoute = settings.name ?? RouteTags.splash;
-    }
 
     return Routes.fadeThrough(settings, (context) {
       switch (settings.name) {
@@ -26,6 +20,8 @@ class RouteGenerator {
           return const MainSignUp();
         case RouteTags.forgetPassword:
           return const MainForgetPassword();
+        case RouteTags.privacyPolicy:
+          return const MainPrivacyPolicy();
         case RouteTags.home:
           return const MainHome();
         case RouteTags.searchPosts:

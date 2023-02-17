@@ -27,6 +27,13 @@ final enLang = {
   "please-check-your-email-and-reset-your-password":
       "Please check your email and reset your password",
 
+  "terms-of-service": "Terms of Service",
+  "and": "And",
+  "privacy": "Privacy",
+  "we-accept": "We Accept",
+  "privacy-policy": "Privacy Policy",
+  "please-accept-the-terms...": "Please accept the terms related to privacy",
+
   // profile
   "posts": "Posts",
   "followers": "Followers",

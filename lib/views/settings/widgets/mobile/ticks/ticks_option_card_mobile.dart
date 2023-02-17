@@ -1,8 +1,6 @@
-import 'package:almas/config/languages/extension/tr.dart';
 import 'package:almas/controllers/public/system_controller.dart';
 import 'package:almas/models/public/tick_option_model.dart';
 import 'package:almas/ui_related/buttons/fade_button.dart';
-import 'package:almas/ui_related/buttons/main_button_mobile.dart';
 import 'package:flutter/material.dart';
 
 class TickOptionCardMobile extends StatelessWidget {
@@ -68,11 +66,11 @@ class TickOptionCardMobile extends StatelessWidget {
               ),
             ),
           ),
-          MainButtonMobile(
-            height: 35,
-            label: 'online-payment'.tr,
-            bgColor: SystemHandler.theme.info,
-          ),
+          // MainButtonMobile(
+          //   height: 35,
+          //   label: 'online-payment'.tr,
+          //   bgColor: SystemHandler.theme.info,
+          // ),
         ],
       ),
     );

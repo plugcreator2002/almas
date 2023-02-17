@@ -11,6 +11,7 @@ export './login/login.dart';
 export './lovers/lovers.dart';
 export './notifications/notifications.dart';
 export './others_profile/others_profile.dart';
+export './privacy_policy/privacy_policy.dart';
 export './private_posts/private_posts.dart';
 export './profile/profile.dart';
 export './rules/rules.dart';

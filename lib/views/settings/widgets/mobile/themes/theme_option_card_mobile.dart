@@ -1,11 +1,13 @@
 import 'package:almas/config/languages/extension/tr.dart';
 import 'package:almas/controllers/public/system_controller.dart';
 import 'package:almas/models/private/settings/setting_product_model.dart';
+import 'package:almas/providers/private/settings_presenter.dart';
 import 'package:almas/repositories/repositories_config.dart';
 import 'package:almas/ui_related/buttons/fade_button.dart';
 import 'package:almas/ui_related/buttons/main_button_mobile.dart';
 import 'package:almas/utils/image_network.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ThemeOptionCardMobile extends StatelessWidget {
   final num? id;
@@ -73,11 +75,14 @@ class ThemeOptionCardMobile extends StatelessWidget {
                   height: 35,
                   label: 'online-payment'.tr,
                   bgColor: SystemHandler.theme.info,
+                  onTap: () {
+                    // context.read<SettingsPresenter>().payment(model);
+                  },
                 ),
               ],
             ],
           ),
-          if (model.name != null && model.nonFree) ...[
+          if (model.name != null && model.isBackground) ...[
             const SizedBox(height: 15),
             ImageNetwork.image(
               "${model.name}.jpg",

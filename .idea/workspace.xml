@@ -14,13 +14,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2398474-14d8-4517-b343-360b63043f41" name="Changes" comment="some files useless deleted">
+      <change afterPath="$PROJECT_DIR$/lib/config/languages/data/longs/fa/privacy_policy_fa.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/public/title_span_config.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/service_plugins/transaction.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui_related/titles/title_span.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/privacy_policy/privacy_policy.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/privacy_policy/views/mobile/privacy_policy_mobile.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/almas_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/almas_android.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.env.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.env.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/languages/data/en.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/languages/data/en.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/languages/data/fa.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/languages/data/fa.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/routes/const.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/routes/const.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/routes/route_generator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/routes/route_generator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/controllers/private/auth/login_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/private/auth/login_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data-server/server_interface/requests/const.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/server_interface/requests/const.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data-server/server_interface/requests/settings/settings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data-server/server_interface/requests/product/product.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/private/settings/setting_product_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/private/settings/setting_product_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/providers/private/settings_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/private/settings_presenter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/service_plugins/cb.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/service_plugins/cb.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui_related/builders/bg_builder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/builders/bg_builder.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui_related/custom_title.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/titles/custom_title.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui_related/popups/mobile/create_comment_popup_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui_related/popups/mobile/create_comment_popup_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/edit_profile/views/mobile/edit_profile_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/edit_profile/views/mobile/edit_profile_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/index.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/login/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/login/login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/login/views/mobile/login_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/login/views/mobile/login_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/fonts/font_option_card_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/fonts/font_option_card_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/header_options_flag_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/header_options_flag_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/themes/theme_option_card_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/themes/theme_option_card_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/ticks/ticks_option_card_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/settings/widgets/mobile/ticks/ticks_option_card_mobile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,28 +100,28 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last.edited.regexp" value="dsdsds_sdsdsdsds//." />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nezamfanni" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/views/settings/widgets/mobile" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\views\settings\widgets\mobile" />
+      <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\config\languages\data\longs\fa" />
+      <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\views" />
       <recent name="D:\Developing\Dart.Flutter\Projects\almas\android" />
       <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\views\_posts\screens" />
-      <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\providers\public" />
-      <recent name="F:\Developing\Dart.Flutter\Projects\almas.v3\lib\ui_related\builders" />
-      <recent name="F:\Developing\Dart.Flutter\Projects\almas.v3\lib\controllers\private\posts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\ui_related\titles" />
       <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\service_plugins" />
       <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\services_emulator" />
       <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\data-server\server_interface" />
       <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\views\filtered_posts" />
-      <recent name="D:\Developing\Dart.Flutter\Projects\almas\lib\views\_posts\screens" />
     </key>
   </component>
   <component name="RunAnythingCache">

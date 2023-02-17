@@ -71,8 +71,10 @@ class RoutesAPI {
   static const commentUnPin = '${baseURL}comment/unpin';
 
   /// settings
-  static const settingFonts = '${baseURL}product/fonts';
-  static const settingThemes = '${baseURL}product/themes';
+  static const productFonts = '${baseURL}product/fonts';
+  static const productThemes = '${baseURL}product/themes';
+  static const createTransaction = '${baseURL}product/createTransaction';
+  static const verifyTransaction = '${baseURL}product/verifyTransaction';
 
   /// account score
   static const topScore = "account-score";

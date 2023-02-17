@@ -4,6 +4,7 @@ class SettingProductModel {
     this.name,
     this.type,
     this.price = 0,
+    this.isBackground = false,
     this.createdAt,
     this.updatedAt,
   });
@@ -13,6 +14,7 @@ class SettingProductModel {
     name = json['name'];
     type = json['type'];
     price = json['price'] ?? 0;
+    isBackground = json['is_background'] ?? false;
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
   }
@@ -21,6 +23,7 @@ class SettingProductModel {
   String? name;
   String? type;
   num price = 0;
+  bool isBackground = false;
   String? createdAt;
   String? updatedAt;
 
@@ -33,7 +36,8 @@ class SettingProductModel {
     map['id'] = id;
     map['name'] = name;
     map['type'] = type;
-    map['price'] = price ?? 0;
+    map['price'] = price;
+    map['is_background'] = isBackground;
     map['created_at'] = createdAt;
     map['updated_at'] = updatedAt;
     return map;
